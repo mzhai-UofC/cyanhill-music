@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYANHILL MUSIC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        let currentAudio = null;
+        let currentPlayButton = null;
+        let currentReleaseItem = null;
+        
+        function togglePlayPause(button, musicPath) {
+            let icon = button.querySelector('i');
+            
+            // 如果找不到i元素，说明已经被feather替换为SVG了
+            if (!icon) {
+                console.log('Icon not found, recreating...');
+                button.innerHTML = '<i data-feather="play"></i>';
+                feather.replace();
+                icon = button.querySelector('i') || button.querySelector('svg');
+            }
+            
+            if (!icon) {
+                console.log('Error: Could not find or create icon element');
+                return;
+            }
+            
+            const currentIcon = icon.getAttribute ? icon.getAttribute('data-feather') : 'play';
+            
+            // 如果点击的是当前正在播放的按钮
+            if (currentAudio && currentPlayButton === button) {
+                if (currentAudio.paused) {
+                    // 恢复播放
+                    currentAudio.play().then(() => {
+                        button.innerHTML = '<i data-feather="pause"></i>';
+                        feather.replace();
+                    }).catch(error => {
+                        console.log('播放失败:', error);
+                        alert('音频文件未找到或加载失败');
+                        resetButton(button);
+                    });
+                } else {
+                    // 暂停播放
+                    currentAudio.pause();
+                    button.innerHTML = '<i data-feather="play"></i>';
+                    feather.replace();
+                }
+                return;
+            }
+            
+            // 停止当前播放的音乐并重置之前的按钮
+            if (currentAudio) {
+                currentAudio.pause();
+                if (currentPlayButton) {
+                    resetButton(currentPlayButton);
+                }
+                if (currentReleaseItem) {
+                    resetReleaseItem(currentReleaseItem);
+                }
+            }
+            
+            // 播放新的音乐
+            currentAudio = new Audio(musicPath);
+            currentPlayButton = button;
+            
+            currentAudio.play().then(() => {
+                // 播放成功，更新按钮为暂停状态
+                button.innerHTML = '<i data-feather="pause"></i>';
+                feather.replace();
+            }).catch(error => {
+                console.log('播放失败:', error);
+                alert('音频文件未找到或加载失败');
+                resetButton(button);
+                currentAudio = null;
+                currentPlayButton = null;
+            });
+            
+            // 音乐结束后重置按钮
+            currentAudio.addEventListener('ended', function() {
+                resetButton(currentPlayButton);
+                if (currentReleaseItem) {
+                    resetReleaseItem(currentReleaseItem);
+                }
+                currentAudio = null;
+                currentPlayButton = null;
+                currentReleaseItem = null;
+            });
+        }
+        
+        function resetButton(button) {
+            if (button) {
+                button.innerHTML = '<i data-feather="play"></i>';
+                feather.replace();
+            }
+        }
+        
+        // Release部分的播放控制函数
+        function playReleaseMusic(musicPath, releaseElement) {
+            const playBtn = releaseElement.querySelector('.play-button');
+            
+            console.log('PlayReleaseMusic called:', musicPath); // 调试信息
+            console.log('playBtn found:', playBtn); // 调试信息
+            
+            if (!playBtn) {
+                console.log('Error: play button not found in release element');
+                return;
+            }
+            
+            console.log('playBtn innerHTML:', playBtn.innerHTML); // 调试：检查按钮内容
+            console.log('playBtn children:', playBtn.children); // 调试：检查子元素
+            
+            const playIcon = playBtn.querySelector('i');
+            console.log('playIcon found:', playIcon); // 调试信息
+            
+            if (!playIcon) {
+                console.log('Error: play icon not found in play button');
+                console.log('Trying to find SVG element instead...'); // 尝试查找SVG
+                const svgElement = playBtn.querySelector('svg');
+                console.log('SVG found:', svgElement);
+                
+                if (svgElement) {
+                    // 如果找到SVG，使用SVG元素
+                    console.log('Using SVG element for icon changes');
+                    handlePlaybackWithSVG(musicPath, releaseElement, playBtn, svgElement);
+                    return;
+                }
+                
+                return;
+            }
+            
+            console.log('Current icon:', playIcon.getAttribute('data-feather')); // 调试信息
+            
+            // 如果点击的是当前正在播放的歌曲
+            if (currentAudio && currentReleaseItem === releaseElement) {
+                if (currentAudio.paused) {
+                    // 恢复播放
+                    currentAudio.play().then(() => {
+                        console.log('Resuming - Setting icon to pause'); // 调试信息
+                        playIcon.setAttribute('data-feather', 'pause');
+                        feather.replace();
+                    }).catch(error => {
+                        console.log('播放失败:', error);
+                        alert('音频文件未找到或加载失败');
+                        resetReleaseItem(releaseElement);
+                    });
+                } else {
+                    // 暂停播放
+                    console.log('Pausing - Setting icon to play'); // 调试信息
+                    currentAudio.pause();
+                    playIcon.setAttribute('data-feather', 'play');
+                    feather.replace();
+                }
+                return;
+            }
+            
+            // 停止当前播放的音乐并重置状态
+            if (currentAudio) {
+                currentAudio.pause();
+                if (currentPlayButton) {
+                    resetButton(currentPlayButton);
+                    currentPlayButton = null;
+                }
+                if (currentReleaseItem) {
+                    resetReleaseItem(currentReleaseItem);
+                }
+            }
+            
+            // 播放新的音乐
+            currentAudio = new Audio(musicPath);
+            currentReleaseItem = releaseElement;
+            currentPlayButton = null; // 清除album按钮引用
+            
+            currentAudio.play().then(() => {
+                // 播放成功，更新中间的play按钮为pause
+                console.log('New playback - Setting icon to pause'); // 调试信息
+                playIcon.setAttribute('data-feather', 'pause');
+                feather.replace();
+                console.log('Icon after change:', playIcon.getAttribute('data-feather')); // 调试信息
+            }).catch(error => {
+                console.log('播放失败:', error);
+                alert('音频文件未找到或加载失败');
+                resetReleaseItem(releaseElement);
+                currentAudio = null;
+                currentReleaseItem = null;
+            });
+            
+            // 音乐结束后重置状态
+            currentAudio.addEventListener('ended', function() {
+                resetReleaseItem(currentReleaseItem);
+                currentAudio = null;
+                currentReleaseItem = null;
+            });
+        }
+        
+        // 处理SVG图标的播放功能
+        function handlePlaybackWithSVG(musicPath, releaseElement, playBtn, svgElement) {
+            // 通过检查SVG的类名或其他属性来判断当前状态
+            const isPlaying = svgElement.querySelector('polygon') ? false : true; // play有polygon，pause有rect
+            
+            console.log('Current SVG is playing:', isPlaying);
+            
+            // 如果点击的是当前正在播放的歌曲
+            if (currentAudio && currentReleaseItem === releaseElement) {
+                if (currentAudio.paused) {
+                    // 恢复播放
+                    currentAudio.play().then(() => {
+                        console.log('Resuming - Replacing SVG with pause icon');
+                        playBtn.innerHTML = '<i data-feather="pause"></i>';
+                        feather.replace();
+                    }).catch(error => {
+                        console.log('播放失败:', error);
+                        alert('音频文件未找到或加载失败');
+                        resetReleaseItem(releaseElement);
+                    });
+                } else {
+                    // 暂停播放
+                    console.log('Pausing - Replacing SVG with play icon');
+                    currentAudio.pause();
+                    playBtn.innerHTML = '<i data-feather="play"></i>';
+                    feather.replace();
+                }
+                return;
+            }
+            
+            // 停止当前播放的音乐并重置状态
+            if (currentAudio) {
+                currentAudio.pause();
+                if (currentPlayButton) {
+                    resetButton(currentPlayButton);
+                    currentPlayButton = null;
+                }
+                if (currentReleaseItem) {
+                    resetReleaseItem(currentReleaseItem);
+                }
+            }
+            
+            // 播放新的音乐
+            currentAudio = new Audio(musicPath);
+            currentReleaseItem = releaseElement;
+            currentPlayButton = null; // 清除album按钮引用
+            
+            currentAudio.play().then(() => {
+                // 播放成功，更新SVG为pause图标
+                console.log('New playback - Replacing SVG with pause icon');
+                playBtn.innerHTML = '<i data-feather="pause"></i>';
+                feather.replace();
+            }).catch(error => {
+                console.log('播放失败:', error);
+                alert('音频文件未找到或加载失败');
+                resetReleaseItem(releaseElement);
+                currentAudio = null;
+                currentReleaseItem = null;
+            });
+            
+            // 音乐结束后重置状态
+            currentAudio.addEventListener('ended', function() {
+                resetReleaseItem(currentReleaseItem);
+                currentAudio = null;
+                currentReleaseItem = null;
+            });
+        }
+        
+        function resetReleaseItem(releaseElement) {
+            if (releaseElement) {
+                const playBtn = releaseElement.querySelector('.play-button');
+                if (playBtn) {
+                    // 直接重置为play图标，让feather处理
+                    playBtn.innerHTML = '<i data-feather="play"></i>';
+                    feather.replace();
+                }
+            }
+        }
+        
+        // 为中间的play按钮添加点击事件处理
+        function toggleReleasePlayback(playButton) {
+            const releaseElement = playButton.closest('.release-item');
+            const headphoneIcon = releaseElement.querySelector('.headphone-icon');
+            const musicPath = headphoneIcon.getAttribute('onclick').match(/'([^']+)'/)[1];
+            
+            console.log('Toggle release playback clicked:', musicPath); // 调试信息
+            playReleaseMusic(musicPath, releaseElement);
+        }
+        
+        // 保持向后兼容的函数，但现在会调用新的release函数
+        function playMusic(musicPath) {
+            console.log('playMusic called with:', musicPath); // 调试信息
+            
+            // 查找包含此音频路径的release元素
+            const headphoneIcons = document.querySelectorAll('.headphone-icon');
+            let targetReleaseElement = null;
+            
+            headphoneIcons.forEach(icon => {
+                const onclickAttr = icon.getAttribute('onclick');
+                console.log('Checking onclick:', onclickAttr); // 调试信息
+                if (onclickAttr && onclickAttr.includes(musicPath)) {
+                    targetReleaseElement = icon.closest('.release-item');
+                    console.log('Found target release element:', targetReleaseElement); // 调试信息
+                }
+            });
+            
+            if (targetReleaseElement) {
+                playReleaseMusic(musicPath, targetReleaseElement);
+            } else {
+                console.log('No release element found, using fallback logic'); // 调试信息
+                // 如果不是release部分的音乐，使用原来的逻辑
+                if (currentAudio) {
+                    currentAudio.pause();
+                    if (currentPlayButton) {
+                        resetButton(currentPlayButton);
+                    }
+                    if (currentReleaseItem) {
+                        resetReleaseItem(currentReleaseItem);
+                    }
+                }
+                
+                currentAudio = new Audio(musicPath);
+                currentAudio.play().catch(error => {
+                    console.log('播放失败:', error);
+                    alert('音频文件未找到或加载失败');
+                });
+                
+                currentAudio.addEventListener('ended', function() {
+                    currentAudio = null;
+                });
+            }
+        }
+        
+        function stopMusic() {
+            if (currentAudio) {
+                currentAudio.pause();
+                if (currentPlayButton) {
+                    resetButton(currentPlayButton);
+                }
+                if (currentReleaseItem) {
+                    resetReleaseItem(currentReleaseItem);
+                }
+                currentAudio = null;
+                currentPlayButton = null;
+                currentReleaseItem = null;
+            }
+        }
+    </script>
+    <script>
+        // 初始化Feather Icons
+        document.addEventListener('DOMContentLoaded', function() {
+            feather.replace();
+        });
+    </script>
+</head>
+<body>
+    <!-- Section 1: Hero Section -->
+    <section class="hero-section">
+        <div class="language-toggle">EN</div>
+        <div class="hero-content">
+            <div class="logo">
+                <div class="logo-container">
+                    <img src="./images/三角形.png" alt="CYANHILL MUSIC" class="logo-main-image">
+                    <div class="logo-text-overlay">CYANHILL<br> MUSIC</div>
+                </div>
+                <div class="green-line"></div>
+                <img src="./images/qingshan-music.png" alt="青山音乐" class="hero-subtitle-image">
+            </div>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Section 2: About CYANHILL MUSIC -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">CYANHILL MUSIC</h2>
+                <div class="about-text">
+                    <p>青山音乐是青山资本旗下专注于音乐内容与文化表达的事务主体,聚焦中国电子音乐的国际化,在电子音乐领域迅速崛起。</p>
+                    <p>自成立以来,青山音乐持续发行具有国际影响力的作品,例如与百大DJ Bassjackers、Ummet Ozcan、国内顶流歌手周深等合作的单曲。</p>
+                    <p>2024年,主理人ZHANGYE发起CHINA EDM项目,打造了国内首个集结顶级电音制作人的内容IP,为中国电音打造了一个发声体系,持续推动中国电音破圈与国际化。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: ZHANGYE Profile -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-content">
+                <div class="profile-left">
+                    <h2 class="section-title">ZHANGYE</h2>
+                    <div class="profile-image-container">
+                        <img src="./images/创始人照片.jpeg" alt="ZHANGYE" class="profile-image">
+                        <div class="profile-nav">
+                            <button class="nav-btn active">小红书</button>
+                            <button class="nav-btn">抖音</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <div class="profile-info">
+                        <p class="profile-role">电涉制作人DJ</p>
+                        <p class="profile-title">青山音乐主理人</p>
+                        <p class="profile-subtitle"><CHINA EDM>中国电子舞曲合辑发起人</p>
+                    </div>
+                    <div class="profile-description">
+                        <p>ZHANGYE张野是中国电子音乐界近几年最具影响力人物之一。ZHANGYE作为电子音乐制作人/DJ,青山音乐主理人和<CHINA EDM>发起人,集结了中国一线和新兴的DJ/电音制作人,开创了中国电子舞曲新时代,在海内外电子音乐市场引发广泛关注,被誉为“中国电音教父”。</p>
+                        <p>作为俄罗斯柴可夫斯基音乐学院作曲系的最高荣誉毕业生。ZHANGYE曾经历过的长期系统性的训练让他的作品有着很强的音乐性。而多年在商业领域的经历也让ZHANGYE对世界有着独特的观察角度。</p>
+                        <p>擅长Dance, House, and Electropop等风格的电子音乐,ZHANGYE持续主导与国内外顶流DJ、歌手合作,包括Bassjackers, Ummet Ozcan, 周深,Jacnieck等。</p>
+                        <p>ZHANGYE的歌曲多次登上全球各大流媒体平台榜单首位。其中<Own Way>在抖音播放量已超过50亿。</p>
+                    </div>
+                    <div class="profile-footer">
+                        <p class="profile-location">商业领域</p>
+                        <p class="profile-details">ZHANGYE张野,青山资本创始人、CEO,中国著名风险投资家。在他的带领下,青山资本凭借敏锐的市场洞察力和精准的投资决策,已成功跻身中国一线早期风险投资机构行列。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Releases -->
+    <section class="releases-section">
+        <div class="container">
+            <h2 class="section-title centered">RELEASES</h2>
+            <div class="releases-grid">
+                <!-- Top Row -->
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/own way.jpg" alt="ZHANGYE - Capella">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/Own Way .mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×Janieck</p>
+                        <p class="track">《Own Way》</p>
+                    </div>
+                </div>
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/heart of peace.png" alt="ZHANGYE - Dangerous">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/HEART OF PEACE.mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×Zhoushen</p>
+                        <p class="track">《Heart Of Peace》</p>
+                    </div>
+                </div>
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/remix heart of peace.jpeg" alt="ZHANGYE - Universe Ocean">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/Heart Of Peace (Ummet Ozcan Remix) .mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×Ummet Ozcan</p>
+                        <p class="track">《Heart Of Peace(Ummet Ozcan remix)》</p>
+                    </div>
+                </div>
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/nobody else.JPEG" alt="ZHANGYE - Blackjazz">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/Nobody Else .mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×Bassjackers</p>
+                        <p class="track">《Nobody Else》</p>
+                    </div>
+                </div>
+                <!-- Bottom Row -->
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/when i was young.jpEg" alt="ZHANGYE - Club Tech">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/WHEN I WAS YOUNG .mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×Julia Ross</p>
+                        <p class="track">《When I Was Young》</p>
+                    </div>
+                </div>
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/whenever the wind blows.png" alt="ZHANGYE - AMEBA">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/WHEREVER THE WIND BLOWS .mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×KARRA</p>
+                        <p class="track">《Wherever The Wind Blows》</p>
+                    </div>
+                </div>
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/a life.JPEG" alt="ZHANGYE - Karol">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/A Life .mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×Panta.Q</p>
+                        <p class="track">《A Life》</p>
+                    </div>
+                </div>
+                <div class="release-item">
+                    <div class="release-image">
+                        <img src="./images/water.JPEG" alt="ZHANGYE - Big Treasure">
+                        <div class="play-button" onclick="toggleReleasePlayback(this)"><i data-feather="play"></i></div>
+                        <div class="headphone-icon" onclick="playMusic('./music/Rhythm Of The Water .mp3')"></div>
+                    </div>
+                    <div class="release-info">
+                        <p class="artist">ZHANGYE×Pia Toscano</p>
+                        <p class="track">《Rhythm Of The Water》</p>
+                    </div>
+                </div>
+            </div>
+            <div class="more-button">
+                <a href="#" class="more-link">MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: CHINA EDM -->
+    <section class="china-edm-section">
+        <div class="container">
+            <div class="china-edm-content">
+                <div class="china-edm-left">
+                    <h2 class="section-title">CHINA EDM</h2>
+                </div>
+                <div class="china-edm-right">
+                    <div class="china-edm-description">
+                        <p>受到西方电子音乐频繁交流与合作这一传统的启发,发起人ZHANGYE和青山音乐共同创立<CHINA EDM>项目,并于2024年发行<CHINA EDM Vol.1>合辑, 开启了中国电子舞曲音乐的新篇章。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="china-edm-vol-content">
+                <div class="china-edm-vol-left">
+                    <h3 class="vol-title">CHINA EDM Vol. 1</h3>
+                </div>
+                <div class="china-edm-vol-right">
+                    <div class="vol-description">
+                        <p>合辑不仅收录了四位一线制作人BEAUZ宝藏、CORSAK胡梦周、Panta.Q郭曲、WILLIM缪维霖的优质作品,同时致力于发掘和提携年轻后起之秀,从数百位投稿者中精选出优秀作品,展示了中国电子音乐的多样性和活力。</p>
+                        <p>该合辑在发布后迅速获得了国内外热烈的反响。受到国内外众多媒体报道,获得海外知名DJ们推荐,并在国内外主流音乐平台榜单中取得优秀成绩。发行首周,合辑9首曲目中有8首登上了QQ音乐电子音乐排行榜,并在前六占据五席。合辑获得TME年度浪潮音乐奖2024年度最佳电子专辑提名,合辑单曲<Rather Lie>荣获2024年度最佳电子歌曲奖项。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="album-section">
+                <div class="album-left">
+                    <div class="album-cover">
+                        <img src="./images/CHINA EDM 专辑封面.jpg" alt="CHINA EDM Vol.1" class="album-image">
+                    </div>
+                    <div class="album-info">
+                        <p class="album-label">合辑发行方：青山音乐</p>
+                        <p class="album-format">海外代理发行:TME</p>
+                        <p class="album-distribution">国内代理发行：科音音乐</p>
+                        <p class="album-date">上线时间:2024.11.15</p>
+                    </div>
+                </div>
+                <div class="album-right">
+                    <div class="track-list">
+                        <div class="track-item">
+                            <span class="track-number">01. Crime</span>
+                            <span class="track-artist">Artist:BEAUZ/Danni Carra</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/01.Crime丨BEAUZ.mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">02. 渴(Desire)feat.</span>
+                            <span class="track-artist">Artist: CORSAK胡梦周/</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/02.渴丨胡梦周.mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">03. Old n New</span>
+                            <span class="track-artist">Artist: Panta.Q郭曲</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/03.Old n New丨Panta.Q郭曲.mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">04. Rather Lie(feat. 于贞)</span>
+                            <span class="track-artist">Artist:WILLIM缪维霖/于贞</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/04.Rather Lie丨缪维霖_于贞.mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">05. Right</span>
+                            <span class="track-artist">Artist: Fslly</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/05.Right丨Fslly.mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">06. Friends(feat. Ethan Cronin)</span>
+                            <span class="track-artist">Artist: Jarvel/Fight Club/Ethan Cronin</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/06.Friends丨Jarvel_Fight Club_Ethan Cronin.mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">07. Motive</span>
+                            <span class="track-artist">Artist: Rayze</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/07.Motive丨Rayze .mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">08. Copper Bass</span>
+                            <span class="track-artist">Artist: TongGuo</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/08.Copper Bass丨TongGuo .mp3')"><i data-feather="play"></i></button>
+                        </div>
+                        <div class="track-item">
+                            <span class="track-number">09. Show You How</span>
+                            <span class="track-artist">Artist: ZHANGYE</span>
+                            <button class="play-btn" onclick="togglePlayPause(this, './music/09.Show You How丨ZHANGYE .mp3')"><i data-feather="play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: CHINA EDM LIVE -->
+    <section class="china-edm-live-section">
+        <div class="container">
+            <div class="china-edm-live-content">
+                <div class="china-edm-live-left">
+                    <h2 class="section-title">CHINA EDM LIVE</h2>
+                </div>
+                <div class="china-edm-live-right">
+                    <div class="live-description">
+                        <p>CHINA EDM项下演出品牌,不断挖掘和培养优秀的电子音乐人才,积极与国际电音界进行交流与合作。CHINAEDM LIVE 将以电子音乐为纽带,连接起电音爱好者和优秀DJ/电音制作人,连接起中国电音和国际舞台,推动中国潮流文化的发展,让更多人感受到电音的魅力。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-section">
+                <div class="contact-left"></div>
+                <div class="contact-right">
+                    <div class="contact-info">
+                        <h3>CONTACT</h3>
+                        <p class="contact-item">商务合作:bd@cyanhillmusicl.com</p>
+                        <p class="contact-item">音乐合作:bq@cyanhillmusicl.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

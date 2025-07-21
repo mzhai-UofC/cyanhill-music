@@ -1,0 +1,1012 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e8e8e8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* Section 1: Hero Section */
+.hero-section {
+    height: 100vh;
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+}
+
+.hero-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-main-image {
+    width: auto;
+    height: auto;
+    width: 18vw;
+    
+    object-fit: contain;
+    display: block;
+}
+
+.logo-text-overlay {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: #000000;
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 3.3rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    z-index: 2;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.green-line {
+    width: 8vw;
+    height: 3px;
+    background-color: #00b894;
+    margin-top: 10vh;
+    margin-bottom: 1vh;
+}
+
+.hero-subtitle-image {
+    width: 10vw;
+    height: auto;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.scroll-indicator {
+    position: relative;
+    font-size: 2rem;
+    color: transparent;
+    animation: bounce 2s infinite;
+    margin-top: 60px;
+    display: inline-block;
+}
+
+.scroll-indicator::before {
+    content: "∨";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #f5f5f5;
+    -webkit-text-stroke: 2px #ccc;
+}
+
+.scroll-indicator::after {
+    content: "∨";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e8e8e8;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Section 2: About Section */
+.about-section {
+    padding: 100px 0;
+    background-color: #e8e8e8;
+}
+
+.about-content {
+    display: flex;
+    gap: 4%;
+    align-items: flex-start;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00b894;
+    margin-bottom: 40px;
+    min-width: 28%;
+    flex-shrink: 0;
+}
+
+/* Unified left alignment for all right-side content */
+.about-text,
+.profile-right,
+.china-edm-right,
+.china-edm-vol-right,
+.album-right,
+.china-edm-live-right,
+.contact-right {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 0;
+    width: 68%;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Section 3: Profile Section */
+.profile-section {
+    padding: 100px 0;
+    background-color: #e8e8e8;
+}
+
+.profile-content {
+    display: flex;
+    gap: 4%;
+    align-items: flex-start;
+}
+
+.profile-left {
+    min-width: 28%;
+    flex-shrink: 0;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00b894;
+    margin-bottom: 30px;
+}
+
+.profile-image-container {
+    position: relative;
+}
+
+.profile-image {
+    width: 15vw;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    object-position: top;
+    margin-bottom: 4vh;
+}
+
+.profile-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-bottom: 2px solid #00b894;
+    margin-right: 4vw;
+    transition: all 0.3s ease;
+}
+
+.nav-btn.active {
+    color: #333;
+    border-bottom: 2px solid #00b894;
+}
+
+.nav-btn:hover {
+    color: #00b894;
+}
+
+.profile-right {
+    flex: 1;
+    text-align: left;
+    margin-left: 0;
+    width: 68%;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+}
+
+.profile-role {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.profile-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.profile-description {
+    margin-bottom: 40px;
+}
+
+.profile-description p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* .profile-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+} */
+
+.profile-location {
+    font-weight: normal;
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.profile-details {
+    color: #666;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* Section 4: Releases Section */
+.releases-section {
+    padding: 100px 0;
+    background-color: #e8e8e8;
+}
+
+.section-title.centered {
+    text-align: center;
+    color: #00b894;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 12vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.section-title.centered::before,
+.section-title.centered::after {
+    content: '';
+    flex: 1;
+    height: 3px;
+    background-color: #00b894;
+    max-width: 350px;
+}
+
+.releases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 85px;
+    margin-bottom: 10px;
+}
+
+.release-item {
+    text-align: center;
+}
+
+.release-image {
+    position: relative;
+    margin-bottom: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.release-image:hover {
+    transform: scale(1.02);
+}
+
+.release-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    /* background: #f5f5f5; */
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.headphone-icon {
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.headphone-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.headphone-icon::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h1v-8H6c-1.66 0-3 1.34-3 3v1c0-.55.45-1 1-1h1V9c0-3.87 3.13-7 7-7s7 3.13 7 7v6h1c.55 0 1 .45 1 1v-1c0-1.66-1.34-3-3-3h-1v8h1c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.release-image:hover .play-button {
+    opacity: 1;
+}
+
+.release-info .artist {
+    /* font-weight: 500; */
+    color: #333;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.release-info .track {
+    color: #777;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.more-button {
+    text-align: right;
+    margin-top: 12vh;
+}
+
+.more-link {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom: 2px solid #00b894;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.more-link:hover {
+    color: #00b894;
+    border-bottom-color: #333;
+}
+
+/* Section 5: CHINA EDM Section */
+.china-edm-section {
+    padding: 100px 0;
+    background-color: #e8e8e8;
+}
+
+.china-edm-content {
+    display: flex;
+    gap: 4%;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.china-edm-left {
+    min-width: 28%;
+    flex-shrink: 0;
+}
+
+.china-edm-right {
+    flex: 1;
+    text-align: left;
+    margin-left: 0;
+    width: 68%;
+}
+
+.china-edm-description {
+    margin-bottom: 0;
+}
+
+.china-edm-description p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.china-edm-vol-content {
+    display: flex;
+    gap: 4%;
+    align-items: flex-start;
+}
+
+.china-edm-vol-left {
+    min-width: 28%;
+    flex-shrink: 0;
+}
+
+.china-edm-vol-right {
+    flex: 1;
+    text-align: left;
+    margin-left: 0;
+    width: 68%;
+}
+
+.vol-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00b894;
+    margin-bottom: 0;
+}
+
+.vol-description {
+    border-top: none;
+    padding-top: 0;
+}
+
+.vol-description p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.vol-description p:last-child {
+    margin-bottom: 10vh;
+}
+
+.album-section {
+    display: flex;
+    gap: 4%;
+    align-items: flex-start;
+    margin-top: 60px;
+}
+
+.album-left {
+    min-width: 28%;
+    flex-shrink: 0;
+}
+
+.album-cover {
+    margin-bottom: 30px;
+    max-width: 15vw;
+}
+
+.album-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.album-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.album-right {
+    flex: 1;
+    text-align: left;
+    margin-left: 0;
+    width: 68%;
+}
+
+.track-list {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+}
+
+.track-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #5e5e5e;
+    background: transparent;
+    transition: background-color 0.3s ease;
+    gap: 20px;
+}
+
+.track-item:last-child {
+    border-bottom: 1px solid #5e5e5e;
+}
+
+.track-item:hover {
+    background-color: #f9f9f9;
+}
+
+.track-number {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.track-artist {
+    color: #666;
+    font-size: 0.85rem;
+    text-align: flex-start;
+}
+
+.play-btn {
+    background: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: auto;
+    font-size: 12px;
+}
+
+.play-btn:hover {
+    color: #666;
+}
+
+/* Section 6: CHINA EDM LIVE Section */
+.china-edm-live-section {
+    padding: 100px 0;
+    background-color: #e8e8e8;
+}
+
+.china-edm-live-content {
+    display: flex;
+    gap: 4%;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.china-edm-live-left {
+    min-width: 28%;
+    flex-shrink: 0;
+}
+
+.china-edm-live-right {
+    flex: 1;
+    text-align: left;
+    margin-left: 0;
+    width: 68%;
+}
+
+.live-description {
+    margin-bottom: 0;
+}
+
+.live-description p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.contact-section {
+    border-top: 1px solid #ccc;
+    padding-top: 40px;
+}
+
+.contact-left {
+    display: none;
+}
+
+.contact-right {
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+/* 大屏幕适配 - 优先级最高 */
+@media (min-width: 3000px) {
+    .container {
+        max-width: 70%;
+    }
+    
+    body {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .releases-grid {
+        gap: 12%;
+    }
+    
+    .release-image img {
+        height: 22vw;
+        max-height: 350px;
+    }
+    
+    .headphone-icon {
+        width: 2.5vw;
+        height: 2.5vw;
+        max-width: 40px;
+        max-height: 40px;
+        bottom: 1.5vw;
+        left: 1.8vw;
+    }
+    
+    .headphone-icon::before {
+        width: 2.2vw;
+        height: 2.2vw;
+        max-width: 36px;
+        max-height: 36px;
+    }
+    
+    .play-button {
+        width: 4.5vw;
+        height: 4.5vw;
+        max-width: 75px;
+        max-height: 75px;
+        font-size: 1.7rem;
+    }
+    
+    .hero-subtitle-image {
+        max-width: 20vw;
+    }
+    
+    
+    .scroll-indicator {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 2400px) and (max-width: 2999px) {
+    .container {
+        max-width: 75%;
+    }
+    
+    body {
+        font-size: 1.4rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .releases-grid {
+        gap: 10%;
+    }
+    
+    .release-image img {
+        height: 18vw;
+        max-height: 300px;
+    }
+    
+    .headphone-icon {
+        width: 2.2vw;
+        height: 2.2vw;
+        max-width: 36px;
+        max-height: 36px;
+        bottom: 1.3vw;
+        left: 1.6vw;
+    }
+    
+    .headphone-icon::before {
+        width: 1.8vw;
+        height: 1.8vw;
+        max-width: 32px;
+        max-height: 32px;
+    }
+    
+    .play-button {
+        width: 3.8vw;
+        height: 3.8vw;
+        max-width: 65px;
+        max-height: 65px;
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle-image {
+        max-width: 18vw;
+    }
+    
+}
+
+@media (min-width: 1800px) and (max-width: 2399px) {
+    .container {
+        max-width: 80%;
+    }
+    
+    body {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .releases-grid {
+        gap: 8%;
+    }
+    
+    .release-image img {
+        height: 15vw;
+        max-height: 250px;
+    }
+    
+    .headphone-icon {
+        width: 1.8vw;
+        height: 1.8vw;
+        max-width: 32px;
+        max-height: 32px;
+        bottom: 1.1vw;
+        left: 1.3vw;
+    }
+    
+    .headphone-icon::before {
+        width: 1.5vw;
+        height: 1.5vw;
+        max-width: 28px;
+        max-height: 28px;
+    }
+    
+    .play-button {
+        width: 3.2vw;
+        height: 3.2vw;
+        max-width: 55px;
+        max-height: 55px;
+        font-size: 1.3rem;
+    }
+    
+    .hero-subtitle-image {
+        max-width: 15vw;
+    }
+    
+}
+
+@media (min-width: 1400px) and (max-width: 1799px) {
+    .container {
+        max-width: 85%;
+    }
+    
+    body {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle-image {
+        max-width: 12vw;
+    }
+    
+
+}
+
+@media (max-width: 768px) {
+    .about-content,
+    .profile-content,
+    .china-edm-content,
+    .china-edm-vol-content,
+    .china-edm-live-content,
+    .contact-section,
+    .album-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .releases-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .headphone-icon {
+        width: 24px;
+        height: 24px;
+        bottom: 8px;
+        left: 8px;
+    }
+    
+    .headphone-icon::before {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .play-button {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+    
+    .profile-left,
+    .china-edm-left,
+    .china-edm-vol-left,
+    .china-edm-live-left,
+    .contact-left,
+    .album-left {
+        min-width: auto;
+    }
+    
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .album-image {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .brand-name {
+        font-size: 2rem;
+    }
+    
+    .logo-main-image {
+        max-width: 300px;
+    }
+    
+    .logo-text-overlay {
+        font-size: 3.5rem;
+        letter-spacing: 0.8px;
+    }
+    
+    .hero-subtitle-image {
+        max-width: 200px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        min-width: auto;
+    }
+    
+    .track-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+    }
+    
+    .track-number {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .releases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .headphone-icon {
+        width: 22px;
+        height: 22px;
+        bottom: 6px;
+        left: 6px;
+    }
+    
+    .headphone-icon::before {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .play-button {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content {
+        gap: 30px;
+    }
+    
+    .brand-name {
+        font-size: 1.8rem;
+    }
+    
+    .logo-text-overlay {
+        font-size: 2.5rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .hero-subtitle-image {
+        max-width: 180px;
+    }
+}
