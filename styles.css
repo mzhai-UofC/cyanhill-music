@@ -234,6 +234,7 @@ body {
     object-fit: cover;
     object-position: top;
     margin-bottom: 4vh;
+    border-radius: 8px;
 }
 
 .profile-nav {
@@ -613,9 +614,9 @@ body {
     border-bottom: 1px solid #5e5e5e;
 }
 
-.track-item:hover {
+/* .track-item:hover {
     background-color: #f9f9f9;
-}
+} */
 
 .track-number {
     color: #666;
