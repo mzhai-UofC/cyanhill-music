@@ -1003,6 +1003,10 @@ body {
         font-size: 0.9rem;
     }
 
+    .logo {
+        margin-top: 5vh; /* 向下移动20vh */
+    }
+
     .logo-main-image {
         width: 67vw;
     }
@@ -1026,7 +1030,7 @@ body {
     }
 
     .scroll-indicator {
-        margin-top: 25vh;
+        margin-top: 10vh; /* 调整为5vh以保持合适间距 */
         position: relative;
         font-size: 2rem;
         color: transparent;
