@@ -142,6 +142,7 @@ body {
 }
 
 
+
 /* Section 2: About Section */
 .about-section {
     padding: 24vh 0;
@@ -151,17 +152,16 @@ body {
 .about-content {
     display: flex;
     gap: 4%;
-    align-items: flex-start; /* 改回flex-start，让标题在顶部对齐 */
+    align-items: center; /* 从flex-start改为center，使标题上下居中 */
 }
 
 .section-title {
-    font-size: 2.5rem; /* 调整标题大小 */
+    font-size: 3rem; /* 从2rem增加到2.5rem */
     font-weight: bold;
     color: #00b894;
-    margin-bottom: 0; /* 移除底部margin */
+    margin-bottom: 40px;
     min-width: 28%;
     flex-shrink: 0;
-    line-height: 1.2;
 }
 
 /* Unified left alignment for all right-side content */
@@ -185,14 +185,12 @@ body {
     width: 68%;
 }
 
-
 .about-text p {
     margin-bottom: 5vh;
     color: #666;
     line-height: 2;
     font-size: 1.3rem;
 }
-
 /* Section 3: Profile Section */
 .profile-section {
     padding: 22vh 0;
