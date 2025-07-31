@@ -62,8 +62,8 @@ body {
 
 .logo-main-image {
     width: 25vw;
-    max-width: 400px;
-    min-width: 250px;
+    /* max-width: 400px;
+    min-width: 250px; */
     height: auto;
     object-fit: contain;
     display: block;
@@ -450,14 +450,14 @@ body {
 
 .release-info .artist {
     /* font-weight: 500; */
-    color: #333;
+    color: #666;
     margin-bottom: 3px;
     font-size: 1.2rem;
     line-height: 1.8;
 }
 
 .release-info .track {
-    color: #777;
+    color: #666;
     font-size: 1.2rem;
     line-height: 1.2;
     margin-top: 0;
@@ -923,7 +923,8 @@ body {
     /* 基础样式调整 - 统一左右margin */
     .container {
         
-        max-width: 100%;
+        max-width: calc(100vw - 19vw); /* 总宽度减去左右各7vw的margin */
+        margin: 0 9.5vw; /* 固定左右各7vw的margin */
     }
 
     /* 移除所有右侧内容的额外padding */
@@ -964,26 +965,32 @@ body {
 
     /* Section 1: Hero Section */
 .hero-section {
-    height: 122vh;
-    padding: 20px 0;
+    height: 100vh;
 }
 
 .language-toggle {
-    top: 40px;
-    right: 30px;
+    top: 11.5vh;
+    right: 12vw;
     font-size: 0.9rem;
+    font-weight: 600;
 }
+
 
 .logo {
-    margin-top: 5vh; /* 向下移动20vh */
+    margin-top: 15.3vh; /* 向下移动20vh */
+    gap: 0px;
 }
 
+.hero-content {
+    gap: 0px;
+    margin-top: 0px; 
+}
 .logo-main-image {
     width: 67vw;
 }
 
 .logo-text-overlay {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     top: 58%;
     transform: translate(-50%, -50%);
 }
@@ -991,17 +998,17 @@ body {
 .green-line {
     width: 25vw;
     height: 2px;
-    margin-top: 7vh;
-    margin-bottom: 1vh;
+    margin-top: 10vh;
+    margin-bottom: 2.5vh;
 }
 
 .hero-subtitle-image {
-    width: 30vw;
+    width: 28vw;
     max-width: 150px;
 }
 
 .scroll-indicator {
-    margin-top: 20vh; /* 调整为5vh以保持合适间距 */
+    margin-top: 22.5vh; /* 调整为5vh以保持合适间距 */
     position: relative;
     font-size: 2rem;
     color: transparent;
@@ -1017,16 +1024,17 @@ body {
 .releases-section,
 .china-edm-section,
 .china-edm-live-section {
-    padding: 20vh 0;
+    padding: 8vh 0;
 }
 
 /* 统一标题样式 */
 .section-title,
 .vol-title {
-    font-size: 2rem; /* 移动端标题大小 */
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 1.67rem; /* 移动端标题大小 */
+    margin-bottom: 4.8vh;
+    /* text-align: center; */
 }
+
 
 /* Releases section 特殊标题样式 */
 .section-title.centered {
@@ -1058,11 +1066,17 @@ body {
 .china-edm-description p,
 .vol-description p,
 .live-description p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: left;
+    font-size: 0.76rem;
+    line-height: 1.8;
+    margin-bottom: 2.5vh;
+    text-align: justify;
     margin-right: 0;
+}
+
+.about-content {
+    display: flex;
+    gap: 4%;
+    align-items: flex-start;
 }
 
 /* Profile section特殊样式 */
@@ -1073,6 +1087,7 @@ body {
 
 /* Profile header - 标题和图片的左右布局 */
 .profile-left {
+    margin-top: 1vh;
     display: flex;
     flex-direction: row;
     gap: 3%;
@@ -1090,7 +1105,7 @@ body {
 
 .profile-left-content .section-title {
     margin-bottom: 15px;
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     text-align: left;
 }
 
@@ -1101,11 +1116,11 @@ body {
 }
 
 .profile-role {
-    font-size: 0.8rem;
+    font-size: 0.66rem;
     color: #666;
     margin-bottom: 4px;
     text-align: left;
-    line-height: 1.3;
+    line-height: 1.74;
 }
 
 /* 将nav按钮移到左侧下方 */
@@ -1119,16 +1134,21 @@ body {
 
 /* 右侧图片容器 */
 .profile-image-container {
+    margin-top: 1vh;
     width: 37%;
     flex-shrink: 0;
     text-align: center;
 }
 
 .profile-image {
-    width: 100%;
+    width: 107%;
+    aspect-ratio: 1/0.99;
     max-width: none;
     margin: 0 auto;
     display: block;
+    border-radius: 8px;
+    margin-left: -1vh;
+   
 }
 
 /* 隐藏图片下的nav按钮 */
@@ -1136,10 +1156,35 @@ body {
     display: none;
 }
 
+.profile-nav {
+    display: flex;
+   
+    margin-top: 4.3vh;
+    margin-left:0vw;
+}
+
+
 .nav-btn {
+    margin-top: 0.3vh;;
     font-size: 0.75rem;
     padding: 6px 12px;
     margin-right: 0;
+    padding: 4px 0;
+    font-size: 0.7rem;
+    border-bottom: 0.5px solid #00b894;
+    margin-left: 6.5vw;
+  
+ 
+}
+
+.nav-btn.active {
+     font-size: 0.75rem;
+    padding: 6px 12px;
+    margin-right: 0;
+    padding: 4px 0;
+    font-size: 0.7rem;
+    border-bottom: 0.5px solid #00b894;
+    margin-left: 0;
 }
 
 /* 隐藏右侧原有的profile-info */
@@ -1153,31 +1198,58 @@ body {
     text-align: left;
     margin-top: 0;
 }
+.profile-description {
+    margin-top: -0.5vh;
+    margin-bottom: 6.2vh;
+   
+}
 
+.profile-description p {
+    font-size: 0.76rem;
+    line-height: 1.9;
+    margin-bottom: 2.5vh;
+    margin-right: 0;;
+}
 /* 添加移动端字体大小覆盖 */
 .profile-location {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    font-size: 0.76rem;
+    line-height: 1.9;
+  
+    text-align: left;
+    margin-right: 0;
 }
 
 .profile-details {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.76rem;
+    line-height: 1.9;
+    margin-bottom: 0;
+    margin-right: 0;
+   
+}
+.releases-section {
+    padding: 1.5vh 0;
+    background-color: #F0F0F5;
+}
+
+.section-title.centered {
+    margin-bottom: 6vh;
 }
 
 /* Releases section */
 .releases-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* 减少间距 */
-    margin-bottom: 30px;
-    margin-left: 0; /* 移除左边距 */
-    margin-right: 0; /* 移除右边距 */
+    gap: 0; /* 减少间距 */
+    margin-bottom: 1vh;
+    margin-left: -10vw; /* 移除左边距 */
+    margin-right: -10vw; /* 移除右边距 */
+
 }
 
 .release-image img {
-    height: 32vw;
+    height: 30vw;
     width: 100%;
+    margin-top: 0;
+    
 }
 
 .play-button {
@@ -1191,7 +1263,7 @@ body {
     width: 24px;
     height: 24px;
     bottom: 1vh;
-    left: 6vw; /* 从8px改为18px，向右移动10px */
+    left: 12vw; /* 从8px改为18px，向右移动10px */
     z-index: 10;
 }
 
@@ -1201,20 +1273,22 @@ body {
 }
 
 .release-info {
-    margin-top: 10px;
+    margin-top: 0;
     text-align: center;
+    margin-bottom: 0;
 }
 
 .release-info .artist {
-    font-size: 0.8rem; /* 手机端缩小字体 */
+    font-size: 0.75rem; /* 手机端缩小字体 */
     line-height: 1.4;
-    margin-bottom: 2px;
+    margin-bottom: 0.4vh;
 }
 
 .release-info .track {
     font-size: 0.75rem; /* 手机端缩小字体 */
-    line-height: 1.3;
+    line-height: 1.4;
     margin-top: 0;
+    margin-bottom: 1.2vh;
 }
 
 .more-button {
@@ -1245,10 +1319,7 @@ body {
     text-align: center;
 }
 
-.album-info p {
-    font-size: 0.8rem;
-    margin-bottom: 8px;
-}
+
 
 .track-item {
     display: flex;
