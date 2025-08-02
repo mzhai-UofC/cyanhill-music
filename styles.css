@@ -21,7 +21,7 @@ body {
 
 /* Section 1: Hero Section */
 .hero-section {
-    height: 122vh;
+    height: 100vh;
     background-color: #F0F0F5;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 3vh;
-    margin-top: 5vh; /* 从-8vh调整为2vh，向下移动10% */
+    margin-top: 14vh; /* 从-8vh调整为2vh，向下移动10% */
 }
 
 .logo {
@@ -61,7 +61,7 @@ body {
 }
 
 .logo-main-image {
-    width: 25vw;
+    width: 19.5vw;
     /* max-width: 400px;
     min-width: 250px; */
     height: auto;
@@ -90,12 +90,12 @@ body {
     width: 8vw;
     height: 0.3vh;
     background-color: #00b894;
-    margin-top: 12vh;
+    margin-top: 9vh;
     margin-bottom: 1.5vh;
 }
 
 .hero-subtitle-image {
-    width: 9vw;
+    width: 8vw;
     height: auto;
     max-width: 200px;
     min-width: 120px;
@@ -107,7 +107,7 @@ body {
     font-size: 2rem;
     color: transparent;
     animation: bounce 2s infinite;
-    margin-top: 11vh;
+    margin-top: 10.5vh;
     display: inline-block;
     left: -1vw;
 }
@@ -145,7 +145,7 @@ body {
 
 /* Section 2: About Section */
 .about-section {
-    padding: 24vh 0;
+    padding: 25vh 0;
     background-color: #F0F0F5;
 }
 
@@ -189,7 +189,7 @@ body {
     margin-bottom: 5vh;
     color: #666;
     line-height: 2;
-    font-size: 1.3rem;
+    font-size: 0.95rem;
 }
 /* Section 3: Profile Section */
 .profile-section {
@@ -820,7 +820,7 @@ body {
     }
     
     .section-title {
-        font-size: 3rem; /* 从2.5rem增加到3rem */
+        font-size: 2.8rem; /* 从2.5rem增加到3rem */
     }
     
     .hero-subtitle-image {
