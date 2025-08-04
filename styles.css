@@ -45,7 +45,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 3vh;
-    margin-top: 14vh; /* 从-8vh调整为2vh，向下移动10% */
+    margin-top: 12vh; /* 从-8vh调整为2vh，向下移动10% */
 }
 
 .logo {
@@ -61,7 +61,7 @@ body {
 }
 
 .logo-main-image {
-    width: 19.5vw;
+    width: 20vw;
     /* max-width: 400px;
     min-width: 250px; */
     height: auto;
@@ -71,7 +71,7 @@ body {
 
 .logo-text-overlay {
     position: absolute;
-    top: 60%;
+    top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #000000;
@@ -145,7 +145,7 @@ body {
 
 /* Section 2: About Section */
 .about-section {
-    padding: 25vh 0;
+    padding: 27vh 0;
     background-color: #F0F0F5;
 }
 
@@ -162,6 +162,7 @@ body {
     margin-bottom: 40px;
     min-width: 28%;
     flex-shrink: 0;
+    letter-spacing: 0;
 }
 
 /* Unified left alignment for all right-side content */
@@ -179,6 +180,7 @@ body {
 }
 
 .about-text {
+    padding-left: 2.8vw; /* 移除左边距 */
     flex: 1;
     text-align: left;
     margin-left: 0;
@@ -189,11 +191,11 @@ body {
     margin-bottom: 5vh;
     color: #666;
     line-height: 2;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 /* Section 3: Profile Section */
 .profile-section {
-    padding: 21vh 0;
+    padding: 14vh 0;
     background-color: #F0F0F5;
 }
 
@@ -232,7 +234,7 @@ body {
 }
 
 .profile-image {
-    width: 19.6vw;
+    width: 17.3vw;
    
     height: auto;
     aspect-ratio: 1/0.99;
@@ -256,7 +258,7 @@ body {
     color: #666;
     cursor: pointer;
     padding: 8px 0;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     text-decoration: none;
     border-bottom: 2px solid #00b894;
     margin-right: 4.5vw;
@@ -277,7 +279,7 @@ body {
     text-align: left;
     margin-left: 0;
     width: 68%;
-    margin-top: 2vh; /* 向下移动1vh */
+    
 }
 
 .profile-info {
@@ -285,14 +287,14 @@ body {
 }
 
 .profile-role {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #666;
     margin-bottom: 5px;
 }
 
 .profile-title {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     font-weight: normal;
     color: #666;
@@ -300,7 +302,7 @@ body {
 }
 
 .profile-subtitle {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #666;
     margin-bottom: 20px;
@@ -314,7 +316,7 @@ body {
 .profile-description p {
     margin-bottom: 4.7vh;
     color: #666;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 2;
 }
 
@@ -325,7 +327,7 @@ body {
 
 .profile-location {
     font-weight: normal;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 2;
     color: #333;
    
@@ -333,13 +335,13 @@ body {
 
 .profile-details {
     color: #666;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 2;
 }
 
 /* Section 4: Releases Section */
 .releases-section {
-    padding: 9vh 0;
+    padding: 13vh 0;
     background-color: #F0F0F5;
 }
 
@@ -348,7 +350,7 @@ body {
     color: #00b894;
     font-size: 2.6rem;
     font-weight: bold;
-    margin-bottom: 12vh;
+    margin-bottom: 10vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -368,8 +370,8 @@ body {
 .releases-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5vw; /* 从85px改为5vw，适应响应式设计 */
-    margin-bottom: 10vh;
+    gap: 5vw 1vh; /* 列间距5vw，行间距2.5vh，减小上下间距 */
+    margin-bottom: 5vh;
     margin-left: 6.2vw;
     margin-right: 6.2vw;
 }
@@ -472,7 +474,7 @@ body {
 
 .more-button {
     text-align: right;
-    margin-top: 13vh;
+    margin-top: 7vh;
     margin-right: 15vh; /* 使用负margin向左移动 */
 }
 
@@ -494,7 +496,7 @@ body {
 
 /* Section 5: CHINA EDM Section */
 .china-edm-section {
-    padding-top: 45vh;
+    padding-top: 34.5vh;
     padding-bottom: 0;
     background-color: #F0F0F5;
     
@@ -539,7 +541,7 @@ body {
 
 .china-edm-vol-content {
     display: flex;
-    margin-top: 24vh;
+    margin-top: 19.5vh;
     align-items: center; /* 从flex-start改为center，使标题上下居中 */
 
 }
@@ -578,7 +580,7 @@ body {
 }
 
 .vol-description p:last-child {
-    margin-bottom: 15.5vh;
+    margin-bottom: 10vh;
 }
 
 .album-section {
@@ -690,7 +692,7 @@ body {
 .china-edm-live-section {
 
     background-color: #F0F0F5;
-    margin-top: 35vh;
+    margin-top: 27.5vh;
 }
 
 .china-edm-live-content {
@@ -725,8 +727,8 @@ body {
 
 .contact-section {
     border-top: 2px solid #a0a0a0;
-    margin-top: 33vh;
-    margin-bottom: 18vh;
+    margin-top: 28.7vh;
+    margin-bottom: 16vh;
 }
 
 .contact-left {
@@ -772,7 +774,7 @@ body {
     }
     
     .releases-grid {
-        gap: 8%;
+        gap:  1% 8%;
     }
     
     .release-image img {
