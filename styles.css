@@ -149,12 +149,12 @@ body {
 
 .about-content {
     display: flex;
-    gap: 4%;
+    gap: 6.5%;
     align-items: center; /* 从flex-start改为center，使标题上下居中 */
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: bold;
     font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     color: #00b894;
@@ -355,7 +355,7 @@ body {
 .section-title.centered {
     text-align: center;
     color: #00b894;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-weight: bold;
     font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     margin-bottom: 10vh;
@@ -478,7 +478,7 @@ body {
 
 .more-button {
     text-align: right;
-    margin-top: 5vh;
+    margin-top: 3.5vh;
     margin-right: 15vh; /* 使用负margin向左移动 */
 }
 
@@ -500,7 +500,7 @@ body {
 
 /* Section 5: CHINA EDM Section */
 .china-edm-section {
-    padding-top: 34.5vh;
+    padding-top: 33.5vh;
     padding-bottom: 0;
     background-color: #F0F0F0;
     
@@ -791,7 +791,7 @@ body {
     }
     
     .section-title {
-        font-size: 3.7rem; /* 从3rem增加到4.5rem */
+        font-size: 2.6rem; /* 从3rem增加到4.5rem */
     }
     
     .releases-grid {
@@ -837,7 +837,7 @@ body {
     }
     
     .section-title {
-        font-size: 2.8rem; /* 从2.5rem增加到3rem */
+        font-size: 2.6rem; /* 从2.5rem增加到3rem */
     }
     
     .hero-subtitle-image {
@@ -1304,7 +1304,7 @@ body {
 .more-button {
     text-align: right;
     margin-top: 8vh;
-    margin-right: 3vh; /* 使用负margin向左移动 */
+    margin-right: 2.5vh; /* 使用负margin向左移动 */
 }
 
 .more-link {
