@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Microsoft YaHei", "微软雅黑", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #F0F0F0;
@@ -154,8 +154,9 @@ body {
 }
 
 .section-title {
-    font-size: 3rem; /* 从2rem增加到2.5rem */
+    font-size: 3rem;
     font-weight: bold;
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     color: #00b894;
     margin-bottom: 40px;
     min-width: 28%;
@@ -190,10 +191,12 @@ body {
     color: #666;
     line-height: 2;
     font-size: 1.2rem;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 /* Section 3: Profile Section */
 .profile-section {
-    padding: 12vh 0;
+    padding: 13vh 0;
     background-color: #F0F0F0;
 }
 
@@ -289,6 +292,8 @@ body {
     line-height: 1.8;
     color: #666;
     margin-bottom: 5px;
+     font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .profile-title {
@@ -296,6 +301,8 @@ body {
     line-height: 1.8;
     font-weight: normal;
     color: #666;
+     font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
     margin-bottom: 5px;
 }
 
@@ -303,6 +310,8 @@ body {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #666;
+     font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
     margin-bottom: 20px;
 }
 
@@ -316,14 +325,10 @@ body {
     color: #666;
     font-size: 1.2rem;
     line-height: 2;
-    margin-bottom: 4vh
-    
+    margin-bottom: 4.2vh;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
-
-/* .profile-footer {
-    border-top: 1px solid #ddd;
-    padding-top: 30px;
-} */
 
 .profile-location {
     font-weight: normal;
@@ -337,6 +342,8 @@ body {
     color: #666;
     font-size: 1.2rem;
     line-height: 2;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* Section 4: Releases Section */
@@ -350,6 +357,7 @@ body {
     color: #00b894;
     font-size: 2.6rem;
     font-weight: bold;
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     margin-bottom: 10vh;
     position: relative;
     display: flex;
@@ -449,6 +457,8 @@ body {
     margin-bottom: 3px;
     font-size: 1.2rem;
     line-height: 1.8;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .release-info .track {
@@ -462,6 +472,8 @@ body {
     max-width: 100%;
     display: block; /* 确保是块级元素 */
     margin-bottom: 2vh; /* 添加底部间距 */
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .more-button {
@@ -524,6 +536,8 @@ body {
     line-height: 2;
     font-size: 1.15rem;
     margin-bottom: 0;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* 隐藏移动端专用容器在桌面版 */
@@ -553,6 +567,7 @@ body {
 .vol-title {
     font-size: 2.6rem;
     font-weight: bold;
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     color: #00b894;
     margin-bottom: 0;
     margin-top: -12vh;
@@ -569,6 +584,8 @@ body {
     margin-bottom: 3.5vh;
     font-size: 1.25rem;
     letter-spacing: 0.02em;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .vol-description p:last-child {
@@ -611,6 +628,8 @@ body {
     margin-bottom: 8px;
     margin-left: 1vw;
     line-height: 2;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .album-right {
@@ -650,12 +669,16 @@ body {
     color: #666;
     font-size: 1.25rem;
     text-align: left;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .track-artist {
     color: #666;
     font-size: 1.25rem;
     text-align: flex-start;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .play-btn {
@@ -715,11 +738,13 @@ body {
     line-height: 2;
     font-size: 1.25rem;
     margin-bottom: 0;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .contact-section {
     border-top: 2px solid #a0a0a0;
-    margin-top: 27.5vh;
+    margin-top: 28.5vh;
     margin-bottom: 16vh;
 }
 
@@ -740,6 +765,8 @@ body {
     margin-top: 5vh;
     margin-bottom: 1vh;
     margin-left: 0; /* 确保左对齐 */
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .contact-item {
@@ -747,6 +774,8 @@ body {
     margin-bottom: 10px;
     font-size: 1.2rem;
     margin-left: 0; /* 确保左对齐 */
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 
@@ -1056,6 +1085,8 @@ body {
     margin-bottom: 2.5vh;
     text-align: justify;
     margin-right: 0;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .about-content {
@@ -1194,6 +1225,8 @@ body {
     line-height: 1.9;
     margin-bottom: 2.5vh;
     margin-right: 0;;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 /* 添加移动端字体大小覆盖 */
 .profile-location {
@@ -1226,7 +1259,7 @@ body {
     gap: 0; /* 减少间距 */
     margin-bottom: 1vh;
     margin-left: -10vw; /* 移除左边距 */
-    margin-right: -10vw; /* 移除右边距 */
+    margin-right: -10vw; /* 秼除右边距 */
 
 }
 
@@ -1255,6 +1288,8 @@ body {
     font-size: 0.75rem; /* 手机端缩小字体 */
     line-height: 1.4;
     margin-bottom: 0.4vh;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .release-info .track {
@@ -1262,6 +1297,8 @@ body {
     line-height: 1.4;
     margin-top: 0;
     margin-bottom: 1.2vh;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .more-button {
@@ -1308,11 +1345,15 @@ body {
 .track-number {
     font-size: 0.9rem;
     font-weight: 500;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .track-artist {
     font-size: 0.8rem;
     color: #666;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .play-btn {
@@ -1337,12 +1378,16 @@ body {
    font-size: 0.85rem;
     margin-bottom: 12px;
     text-align: left;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .contact-item {
     font-size: 0.85rem;
     margin-bottom: 12px;
     text-align: left;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* CHINA EDM section 移动端特殊布局 */
@@ -1402,6 +1447,8 @@ body {
     color: #666;
     margin-bottom: 8px;
     line-height: 1.4;
+    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* 右侧：专辑封面 */
