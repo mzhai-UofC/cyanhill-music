@@ -45,7 +45,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 3vh;
-    margin-top: 14.5vh; /* 从-8vh调整为2vh，向下移动10% */
+    margin-top: 13.5vh; /* 从-8vh调整为2vh，向下移动10% */
 }
 
 .logo {
@@ -90,15 +90,13 @@ body {
     width: 8vw;
     height: 0.3vh;
     background-color: #00b894;
-    margin-top: 10.5vh;
+    margin-top: 9vh;
     margin-bottom: 1.5vh;
 }
 
 .hero-subtitle-image {
-    width: 8vw;
+    width: 9vw;
     height: auto;
-    max-width: 200px;
-    min-width: 120px;
     object-fit: contain;
 }
 
@@ -145,7 +143,7 @@ body {
 
 /* Section 2: About Section */
 .about-section {
-    padding: 30vh 0;
+    padding: 28vh 0;
     background-color: #F0F0F0;
 }
 
@@ -195,7 +193,7 @@ body {
 }
 /* Section 3: Profile Section */
 .profile-section {
-    padding: 14vh 0;
+    padding: 12vh 0;
     background-color: #F0F0F0;
 }
 
@@ -309,7 +307,7 @@ body {
 }
 
 .profile-description {
-    margin-top: 9.2vh;
+    margin-top: 7vh;
     margin-bottom: 9.5vh;
 }
 
@@ -468,7 +466,7 @@ body {
 
 .more-button {
     text-align: right;
-    margin-top: 7vh;
+    margin-top: 5vh;
     margin-right: 15vh; /* 使用负margin向左移动 */
 }
 
@@ -524,7 +522,7 @@ body {
 .china-edm-description p {
     color: #666;
     line-height: 2;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin-bottom: 0;
 }
 
@@ -568,13 +566,13 @@ body {
 .vol-description p {
     color: #666;
     line-height: 2;
-    margin-bottom: 4.5vh;
+    margin-bottom: 3.5vh;
     font-size: 1.25rem;
     letter-spacing: 0.02em;
 }
 
 .vol-description p:last-child {
-    margin-bottom: 10vh;
+    margin-bottom: 8.5vh;
 }
 
 .album-section {
@@ -721,7 +719,7 @@ body {
 
 .contact-section {
     border-top: 2px solid #a0a0a0;
-    margin-top: 28.7vh;
+    margin-top: 27.5vh;
     margin-bottom: 16vh;
 }
 
@@ -739,7 +737,7 @@ body {
     font-size: 1.25rem;
     font-weight: normal;
     color: #666;
-    margin-top: 6vh;
+    margin-top: 5vh;
     margin-bottom: 1vh;
     margin-left: 0; /* 确保左对齐 */
 }
