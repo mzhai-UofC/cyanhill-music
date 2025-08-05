@@ -33,9 +33,9 @@ body {
     position: absolute;
     top: 5vh;
     right: 5vw;
-    color: #666;
+    color: #585858;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -115,8 +115,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    color: #6b6b6b;
-    -webkit-text-stroke: 2px #888888;
+    color: #c7c7c7;
+    -webkit-text-stroke: 2px #c7c7c7;
 }
 
 .scroll-indicator::after {
@@ -124,7 +124,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    color: #b1b1b1;
+    color: #c7c7c7;
 }
 
 @keyframes bounce {
@@ -154,7 +154,7 @@ body {
 }
 
 .section-title {
-    font-size: 2.6rem;
+    font-size: 2.7rem;
     font-weight: bold;
     font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     color: #00b894;
@@ -188,10 +188,10 @@ body {
 
 .about-text p {
     margin-bottom: 4vh;
-    color: #666;
+    color: #585858;
     line-height: 2;
-    font-size: 1.2rem;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 0.95rem;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 /* Section 3: Profile Section */
@@ -256,10 +256,10 @@ body {
 .nav-btn {
     background: none;
     border: none;
-    color: #666;
+    color: #585858;
     cursor: pointer;
     padding: 8px 0;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     text-decoration: none;
     border-bottom: 2px solid #00b894;
     margin-right: 4.5vw;
@@ -267,7 +267,7 @@ body {
 }
 
 .nav-btn.active {
-    color: #666;
+    color: #585858;
     border-bottom: 2px solid #00b894;
 }
 
@@ -288,29 +288,29 @@ body {
 }
 
 .profile-role {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    color: #666;
+    color: #585858;
     margin-bottom: 5px;
-     font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
 .profile-title {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     line-height: 1.8;
     font-weight: normal;
-    color: #666;
-     font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    color: #585858;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
     margin-bottom: 5px;
 }
 
 .profile-subtitle {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    color: #666;
-     font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    color: #585858;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -322,28 +322,27 @@ body {
 
 .profile-description p {
     margin-bottom: 4.7vh;
-    color: #666;
-    font-size: 1.2rem;
+    color: #585858;
+    font-size: 0.95rem;
     line-height: 2;
     margin-bottom: 4.2vh;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
 .profile-location {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     line-height: 2;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    color: #666;
-   
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    color: #585858;
 }
 
 .profile-details {
-    color: #666;
-    font-size: 1.2rem;
+    color: #585858;
+    font-size: 0.95rem;
     line-height: 2;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -356,7 +355,7 @@ body {
 .section-title.centered {
     text-align: center;
     color: #00b894;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     margin-bottom: 10vh;
@@ -402,7 +401,7 @@ body {
 }
 
 .release-image img {
-    width: 90%;
+    width: 70%;
     object-fit: contain;
     /* background: #f5f5f5; */
 }
@@ -410,8 +409,8 @@ body {
 /* 将play-button移到headphone-icon位置，使用耳机图标 */
 .play-button {
     position: absolute;
-    bottom: 5vh;
-    left: 8vw;
+    bottom: 2.5vh;
+    left: 3.5vw;
     width: 28px;
     height: 28px;
     background-color: transparent;
@@ -454,26 +453,26 @@ body {
 
 .release-info .artist {
     /* font-weight: 500; */
-    color: #666;
+    color: #585858;
     margin-bottom: 3px;
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
 .release-info .track {
-    color: #666;
-    font-size: 1.2rem;
+    color: #585858;
+    font-size: 0.95rem;
     line-height: 1.2;
     margin-top: 0;
     white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
-    display: block; /* 确保是块级元素 */
-    margin-bottom: 2vh; /* 添加底部间距 */
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    display: block;
+    margin-bottom: 2vh;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -487,7 +486,7 @@ body {
     display: inline-block;
     color: #333;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     border-bottom: 2px solid #00b894;
     padding-bottom: 2px;
@@ -533,11 +532,11 @@ body {
 }
 
 .china-edm-description p {
-    color: #666;
+    color: #585858;
     line-height: 2;
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     margin-bottom: 0;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -566,7 +565,7 @@ body {
 }
 
 .vol-title {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     font-weight: bold;
     font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     color: #00b894;
@@ -580,12 +579,12 @@ body {
 }
 
 .vol-description p {
-    color: #666;
+    color: #585858;
     line-height: 2;
     margin-bottom: 3.5vh;
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     letter-spacing: 0.02em;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -624,12 +623,12 @@ body {
 }
 
 .album-info p {
-    color: #666;
-    font-size: 1.25rem;
+    color: #585858;
+    font-size: 0.95rem;
     margin-bottom: 8px;
     margin-left: 1vw;
     line-height: 2;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -667,18 +666,18 @@ body {
 } */
 
 .track-number {
-    color: #666;
-    font-size: 1.25rem;
+    color: #585858;
+    font-size: 0.95rem;
     text-align: left;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
 .track-artist {
-    color: #666;
-    font-size: 1.25rem;
+    color: #585858;
+    font-size: 0.95rem;
     text-align: flex-start;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -701,7 +700,7 @@ body {
 }
 
 .play-btn:hover {
-    color: #666;
+    color: #585858;
 }
 
 /* Section 6: CHINA EDM LIVE Section */
@@ -735,11 +734,11 @@ body {
 }
 
 .live-description p {
-    color: #666;
+    color: #585858;
     line-height: 2;
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     margin-bottom: 0;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -760,22 +759,22 @@ body {
 }
 
 .contact-info h3 {
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     font-weight: normal;
-    color: #666;
+    color: #585858;
     margin-top: 5vh;
     margin-bottom: 1vh;
-    margin-left: 0; /* 确保左对齐 */
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    margin-left: 0;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
 .contact-item {
-    color: #666;
+    color: #585858;
     margin-bottom: 10px;
-    font-size: 1.2rem;
-    margin-left: 0; /* 确保左对齐 */
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-size: 0.95rem;
+    margin-left: 0;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -788,11 +787,11 @@ body {
     }
     
     body {
-        font-size: 1.2rem;
+        font-size: 0.95rem;
     }
     
     .section-title {
-        font-size: 2.6rem; /* 从3rem增加到4.5rem */
+        font-size: 2.7rem; /* 从3rem增加到4.5rem */
     }
     
     .releases-grid {
@@ -838,7 +837,7 @@ body {
     }
     
     .section-title {
-        font-size: 2.6rem; /* 从2.5rem增加到3rem */
+        font-size: 2.7rem; /* 从2.5rem增加到3rem */
     }
     
     .hero-subtitle-image {
@@ -1086,7 +1085,7 @@ body {
     margin-bottom: 2.5vh;
     text-align: justify;
     margin-right: 0;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1134,7 +1133,7 @@ body {
 
 .profile-role {
     font-size: 0.66rem;
-    color: #666;
+    color: #585858;
     margin-bottom: 4px;
     text-align: left;
     line-height: 1.74;
@@ -1225,8 +1224,8 @@ body {
     font-size: 0.76rem;
     line-height: 1.9;
     margin-bottom: 2.5vh;
-    margin-right: 0;;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    margin-right: 0;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 /* 添加移动端字体大小覆盖 */
@@ -1286,19 +1285,19 @@ body {
 }
 
 .release-info .artist {
-    font-size: 0.75rem; /* 手机端缩小字体 */
+    font-size: 0.75rem;
     line-height: 1.4;
     margin-bottom: 0.4vh;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
 .release-info .track {
-    font-size: 0.75rem; /* 手机端缩小字体 */
+    font-size: 0.75rem;
     line-height: 1.4;
     margin-top: 0;
     margin-bottom: 1.2vh;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1346,14 +1345,14 @@ body {
 .track-number {
     font-size: 0.9rem;
     font-weight: 500;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
 .track-artist {
     font-size: 0.8rem;
-    color: #666;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    color: #585858;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1379,7 +1378,7 @@ body {
    font-size: 0.85rem;
     margin-bottom: 12px;
     text-align: left;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1387,7 +1386,7 @@ body {
     font-size: 0.85rem;
     margin-bottom: 12px;
     text-align: left;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1445,10 +1444,10 @@ body {
 
 .mobile-album-info p {
     font-size: 0.8rem;
-    color: #666;
+    color: #585858;
     margin-bottom: 8px;
     line-height: 1.4;
-    font-family: "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-weight: 300;
 }
 
