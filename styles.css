@@ -1285,7 +1285,7 @@ body {
 }
 
 .release-info .artist {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     line-height: 1.4;
     margin-bottom: 0.4vh;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
@@ -1293,7 +1293,7 @@ body {
 }
 
 .release-info .track {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     line-height: 1.4;
     margin-top: 0;
     margin-bottom: 1.2vh;
