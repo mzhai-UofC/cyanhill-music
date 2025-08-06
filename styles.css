@@ -149,7 +149,7 @@ body {
 
 .about-content {
     display: flex;
-    gap: 6.5%;
+    gap: 3%;
     align-items: center; /* 从flex-start改为center，使标题上下居中 */
 }
 
@@ -176,14 +176,13 @@ body {
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+
 }
 
 .about-text {
-    padding-left: 2.8vw; /* 移除左边距 */
     flex: 1;
     text-align: left;
-    margin-left: 0;
-    width: 68%;
+    
 }
 
 .about-text p {
@@ -191,7 +190,7 @@ body {
     color: #585858;
     line-height: 2;
     font-size: 0.95rem;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 /* Section 3: Profile Section */
@@ -210,6 +209,7 @@ body {
     min-width: 28%;
     flex-shrink: 0;
 }
+
 
 .profile-left-content {
     /* Desktop: hide roles and nav in left content */
@@ -278,7 +278,7 @@ body {
 .profile-right {
     flex: 1;
     text-align: left;
-    margin-left: 0;
+    margin-left: 0.5vw;
     width: 68%;
     
 }
@@ -292,7 +292,7 @@ body {
     line-height: 1.8;
     color: #585858;
     margin-bottom: 5px;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -301,7 +301,7 @@ body {
     line-height: 1.8;
     font-weight: normal;
     color: #585858;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     margin-bottom: 5px;
 }
@@ -310,7 +310,7 @@ body {
     font-size: 0.95rem;
     line-height: 1.8;
     color: #585858;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -326,7 +326,7 @@ body {
     font-size: 0.95rem;
     line-height: 2;
     margin-bottom: 4.2vh;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -334,7 +334,7 @@ body {
     font-weight: 300;
     font-size: 0.95rem;
     line-height: 2;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     color: #585858;
 }
 
@@ -342,7 +342,7 @@ body {
     color: #585858;
     font-size: 0.95rem;
     line-height: 2;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -457,7 +457,7 @@ body {
     margin-bottom: 3px;
     font-size: 0.95rem;
     line-height: 1.8;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -472,7 +472,7 @@ body {
     max-width: 100%;
     display: block;
     margin-bottom: 2vh;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -524,7 +524,7 @@ body {
     flex: 1;
     text-align: left;
     margin-left: 0;
-    width: 69.5%;
+    width: 68%;
 }
 
 .china-edm-description {
@@ -536,7 +536,7 @@ body {
     line-height: 2;
     font-size: 0.95rem;
     margin-bottom: 0;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -584,7 +584,7 @@ body {
     margin-bottom: 3.5vh;
     font-size: 0.95rem;
     letter-spacing: 0.02em;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -628,14 +628,14 @@ body {
     margin-bottom: 8px;
     margin-left: 1vw;
     line-height: 2;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
 .album-right {
     flex: 1;
     text-align: left;
-    margin-left: 1.8vw;
+    margin-left: 2.1vw;
     width: 66%;
 }
 
@@ -669,7 +669,7 @@ body {
     color: #585858;
     font-size: 0.95rem;
     text-align: left;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -677,7 +677,7 @@ body {
     color: #585858;
     font-size: 0.95rem;
     text-align: flex-start;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -725,7 +725,7 @@ body {
 .china-edm-live-right {
     flex: 1;
     text-align: left;
-    margin-left: 1.2vw;
+    margin-left: 0;
     width: 68%;
 }
 
@@ -738,7 +738,7 @@ body {
     line-height: 2;
     font-size: 0.95rem;
     margin-bottom: 0;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -765,7 +765,7 @@ body {
     margin-top: 5vh;
     margin-bottom: 1vh;
     margin-left: 0;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -774,7 +774,7 @@ body {
     margin-bottom: 10px;
     font-size: 0.95rem;
     margin-left: 0;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1085,7 +1085,7 @@ body {
     margin-bottom: 2.5vh;
     text-align: justify;
     margin-right: 0;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1225,7 +1225,7 @@ body {
     line-height: 1.9;
     margin-bottom: 2.5vh;
     margin-right: 0;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 /* 添加移动端字体大小覆盖 */
@@ -1288,7 +1288,7 @@ body {
     font-size: 0.75rem;
     line-height: 1.4;
     margin-bottom: 0.4vh;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1297,7 +1297,7 @@ body {
     line-height: 1.4;
     margin-top: 0;
     margin-bottom: 1.2vh;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1345,14 +1345,14 @@ body {
 .track-number {
     font-size: 0.9rem;
     font-weight: 500;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
 .track-artist {
     font-size: 0.8rem;
     color: #585858;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1378,7 +1378,7 @@ body {
    font-size: 0.85rem;
     margin-bottom: 12px;
     text-align: left;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1386,7 +1386,7 @@ body {
     font-size: 0.85rem;
     margin-bottom: 12px;
     text-align: left;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
@@ -1447,7 +1447,7 @@ body {
     color: #585858;
     margin-bottom: 8px;
     line-height: 1.4;
-    font-family: "Noto Sans SC", "Microsoft YaHei Light", "微软雅黑 Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
