@@ -937,8 +937,8 @@ body {
     /* 基础样式调整 - 统一左右margin */
     .container {
         
-        max-width: calc(100vw - 19vw); /* 总宽度减去左右各7vw的margin */
-        margin: 0 9.5vw; /* 固定左右各7vw的margin */
+        max-width: calc(100vw - 18vw); /* 总宽度减去左右各7vw的margin */
+        margin: 0 9vw; /* 固定左右各7vw的margin */
     }
 
     /* 移除所有右侧内容的额外padding */
@@ -983,10 +983,11 @@ body {
 }
 
 .language-toggle {
-    top: 11.5vh;
+    top: 4vh;
     right: 12vw;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
 }
 
 
@@ -1004,7 +1005,7 @@ body {
 }
 
 .logo-text-overlay {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     top: 58%;
     transform: translate(-50%, -50%);
 }
@@ -1044,8 +1045,8 @@ body {
 /* 统一标题样式 */
 .section-title,
 .vol-title {
-    font-size: 1.67rem; /* 移动端标题大小 */
-    margin-bottom: 4.8vh;
+    font-size: 1.4rem; /* 移动端标题大小 */
+    margin-bottom: 5.5vh;
     /* text-align: center; */
 }
 
@@ -1080,15 +1081,18 @@ body {
 .china-edm-description p,
 .vol-description p,
 .live-description p {
-    font-size: 0.76rem;
+    font-size: 0.69rem;
     line-height: 1.8;
-    margin-bottom: 2.5vh;
+    margin-bottom: 2.3vh;
     text-align: justify;
     margin-right: 0;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
 
+.about-section {
+    padding: 16vh 0;
+}
 .about-content {
     display: flex;
     gap: 4%;
@@ -1121,7 +1125,7 @@ body {
 
 .profile-left-content .section-title {
     margin-bottom: 15px;
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     text-align: left;
 }
 
@@ -1182,25 +1186,25 @@ body {
 
 .nav-btn {
     margin-top: 0.3vh;;
-    font-size: 0.75rem;
+    font-size: 0.69rem;
     padding: 6px 12px;
     margin-right: 0;
     padding: 4px 0;
-    font-size: 0.7rem;
     border-bottom: 0.5px solid #00b894;
     margin-left: 6.5vw;
-  
- 
+    font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+
 }
 
 .nav-btn.active {
-     font-size: 0.75rem;
+
     padding: 6px 12px;
     margin-right: 0;
     padding: 4px 0;
-    font-size: 0.7rem;
+    font-size: 0.69rem;
     border-bottom: 0.5px solid #00b894;
     margin-left: 0;
+     font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* 隐藏右侧原有的profile-info */
@@ -1216,14 +1220,14 @@ body {
 }
 .profile-description {
     margin-top: -0.5vh;
-    margin-bottom: 6.2vh;
+    margin-bottom: 6.7vh;
    
 }
 
 .profile-description p {
-    font-size: 0.76rem;
+    font-size: 0.66rem;
     line-height: 1.9;
-    margin-bottom: 2.5vh;
+    margin-bottom: 3.9vh;
     margin-right: 0;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
@@ -1238,19 +1242,20 @@ body {
 }
 
 .profile-details {
-    font-size: 0.76rem;
+    font-size: 0.66rem;
     line-height: 1.9;
     margin-bottom: 0;
     margin-right: 0;
+      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
    
 }
 .releases-section {
-    padding: 1.5vh 0;
+    padding: 5.5vh 0;
     background-color: #F0F0F5;
 }
 
 .section-title.centered {
-    margin-bottom: 6vh;
+    margin-bottom: 7vh;
 }
 
 /* Releases section */
@@ -1258,13 +1263,13 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 0; /* 减少间距 */
     margin-bottom: 1vh;
-    margin-left: -10vw; /* 移除左边距 */
-    margin-right: -10vw; /* 秼除右边距 */
+    margin-left: -8vw; /* 移除左边距 */
+    margin-right: -8vw; /* 秼除右边距 */
 
 }
 
 .release-image img {
-    height: 30vw;
+    height: 27.5vw;
     width: 100%;
     margin-top: 0;
     
@@ -1285,7 +1290,7 @@ body {
 }
 
 .release-info .artist {
-    font-size: 0.5rem;
+    font-size: 0.55rem;
     line-height: 1.4;
     margin-bottom: 0.4vh;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
@@ -1293,7 +1298,7 @@ body {
 }
 
 .release-info .track {
-    font-size: 0.5rem;
+    font-size: 0.55rem;
     line-height: 1.4;
     margin-top: 0;
     margin-bottom: 1.2vh;
@@ -1303,12 +1308,13 @@ body {
 
 .more-button {
     text-align: right;
-    margin-top: 8vh;
+    margin-top: 4.5vh;
     margin-right: 2.5vh; /* 使用负margin向左移动 */
+    font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
 }
 
 .more-link {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 300;
 }
 /* Album section */
@@ -1367,6 +1373,15 @@ body {
     font-size: 0.9rem;
 }
 
+
+.china-edm-section {
+    padding-top: 21vh;
+    padding-bottom: 0;
+    background-color: #F0F0F5;
+    
+    margin-right: 0;
+}
+
 /* Contact section */
 .contact-section {
     flex-direction: column;
@@ -1393,8 +1408,9 @@ body {
 /* CHINA EDM section 移动端特殊布局 */
 .china-edm-content {
     flex-direction: column;
-    gap: 30px;
+    gap: 1vh;
     text-align: center;
+    margin-bottom: 9vh;
 }
 
 .china-edm-left {
@@ -1402,11 +1418,7 @@ body {
     text-align: left;
 }
 
-.china-edm-left .section-title {
-    font-size: 2rem;
-    margin-bottom: 0;
-    text-align: left;
-}
+
 
 .china-edm-right {
     width: 100%;
@@ -1421,6 +1433,7 @@ body {
     gap: 4%;
     align-items: flex-start;
     margin-bottom: 8vh;
+    margin-right: -4vw; /* 向左移动一点以对齐 */
 }
 
 /* 左侧：标题和发行信息 */
@@ -1431,7 +1444,7 @@ body {
 }
 
 .mobile-vol-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #00b894;
     margin-bottom: 30px;
@@ -1443,7 +1456,7 @@ body {
 }
 
 .mobile-album-info p {
-    font-size: 0.8rem;
+    font-size: 0.66rem;
     color: #585858;
     margin-bottom: 8px;
     line-height: 1.4;
@@ -1453,9 +1466,10 @@ body {
 
 /* 右侧：专辑封面 */
 .mobile-album-right {
-    width: 45%;
+    width: 40%;
     flex-shrink: 0;
     text-align: center;
+    margin-top: 1vh;
 }
 
 .mobile-album-image {
@@ -1464,7 +1478,6 @@ body {
     height: auto;
     aspect-ratio: 1/1;
     object-fit: cover;
-    margin: 0 auto;
     display: block;
 }
 
@@ -1502,26 +1515,48 @@ body {
     text-align: left;
     margin-left: 0;
 }
+.china-edm-vol-content {
+    margin-top: 11vh;
+}
+.vol-description p { 
+    margin-bottom: 3.7vh;
+}
+.vol-description p:last-child {
+    margin-bottom: 7vh;
+}
+.track-number, .track-artist {
+    font-size: 0.66rem;
+}
+.china-edm-live-section {
 
-.album-left {
-    display: none; /* 隐藏左侧的专辑封面和信息 */
+    margin-top: 10vh;
 }
 
-.album-right {
-    width: 100%;
-    text-align: left;
+.china-edm-live-content {
+
+    gap: 0;
+    align-items: flex-start;
+    margin-bottom: 10vh;
+}
+
+.contact-section {
+    border-top: 1px solid #a0a0a0;
+    margin-top: 13vh;
+    margin-bottom: 1vh;
+}
+
+.contact-info h3 {
+    font-size: 0.66rem;
+   
+    margin-top: 4vh;
+    margin-bottom: 1vh;
     margin-left: 0;
 }
 
-
-
-.album-left {
-    display: none; /* 隐藏左侧的专辑封面和信息 */
+.contact-item {
+  
+   font-size: 0.66rem;
 }
 
-.album-right {
-    width: 100%;
-    text-align: left;
-    margin-left: 0;
-}
+
 }
