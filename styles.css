@@ -1081,6 +1081,7 @@ body {
 .china-edm-description p,
 .vol-description p,
 .live-description p {
+     color: #585858;
     font-size: 0.69rem;
     line-height: 1.8;
     margin-bottom: 2.3vh;
