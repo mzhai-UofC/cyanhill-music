@@ -926,15 +926,24 @@ body {
 .mobile-vol-title {
     font-size: 1.4rem !important; 
     margin-bottom: 5.5vh;
-    /* 使用更粗的字体组合，接近微软雅黑粗体效果 */
-    font-family: "Microsoft YaHei Bold", "微软雅黑 Bold", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif !important;
-    font-weight: 900 !important;
+    /* 使用web字体确保移动端粗体效果 */
+    font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
+    font-weight: 900 !important; /* 使用最粗的权重 */
     flex-shrink: 0;
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased; 
     text-rendering: optimizeLegibility;
-    /* 添加文字阴影增强粗体效果 */
-    text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor, 0 0.3px 0 currentColor, 0 -0.3px 0 currentColor !important;
+    /* 为移动端添加更强的文字描边效果 */
+    -webkit-text-stroke: 0.5px currentColor;
+    text-shadow: 
+        0.5px 0 0 currentColor, 
+        -0.5px 0 0 currentColor, 
+        0 0.5px 0 currentColor, 
+        0 -0.5px 0 currentColor,
+        0.5px 0.5px 0 currentColor,
+        -0.5px -0.5px 0 currentColor,
+        0.5px -0.5px 0 currentColor,
+        -0.5px 0.5px 0 currentColor !important;
     /* text-align: center; */
 }
 
@@ -949,9 +958,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Microsoft YaHei Bold", "微软雅黑 Bold", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif !important;
+    font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
     font-weight: 900 !important;
-    text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor, 0 0.3px 0 currentColor, 0 -0.3px 0 currentColor !important;
+    -webkit-text-stroke: 0.5px currentColor;
+    text-shadow: 
+        0.5px 0 0 currentColor, 
+        -0.5px 0 0 currentColor, 
+        0 0.5px 0 currentColor, 
+        0 -0.5px 0 currentColor,
+        0.5px 0.5px 0 currentColor,
+        -0.5px -0.5px 0 currentColor,
+        0.5px -0.5px 0 currentColor,
+        -0.5px 0.5px 0 currentColor !important;
 }
 
 /* 其他移动端样式保持不变 */
@@ -1009,9 +1027,18 @@ body {
     margin-bottom: 15px;
     font-size: 1.4rem !important;
     text-align: left;
-    font-family: "Microsoft YaHei Bold", "微软雅黑 Bold", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif !important;
+    font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
     font-weight: 900 !important;
-    text-shadow: 0.3px 0 0 currentColor, -0.3px 0 0 currentColor, 0 0.3px 0 currentColor, 0 -0.3px 0 currentColor !important;
+    -webkit-text-stroke: 0.5px currentColor;
+    text-shadow: 
+        0.5px 0 0 currentColor, 
+        -0.5px 0 0 currentColor, 
+        0 0.5px 0 currentColor, 
+        0 -0.5px 0 currentColor,
+        0.5px 0.5px 0 currentColor,
+        -0.5px -0.5px 0 currentColor,
+        0.5px -0.5px 0 currentColor,
+        -0.5px 0.5px 0 currentColor !important;
 }
 
 /* 显示角色信息 */
@@ -1334,12 +1361,17 @@ body {
 
 .mobile-vol-title {
     font-size: 0.9rem !important;
-    font-family: "Microsoft YaHei Bold", "微软雅黑 Bold", "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif !important;
+    font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
     font-weight: 900 !important;
     color: #00b894;
     margin-bottom: 30px;
     text-align: left;
-    text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor, 0 0.2px 0 currentColor, 0 -0.2px 0 currentColor !important;
+    -webkit-text-stroke: 0.3px currentColor;
+    text-shadow: 
+        0.3px 0 0 currentColor, 
+        -0.3px 0 0 currentColor, 
+        0 0.3px 0 currentColor, 
+        0 -0.3px 0 currentColor !important;
 }
 
 .mobile-album-info {
@@ -1461,4 +1493,5 @@ body {
     font-size: 0.66rem;
     
     line-height: 1.4;
+}
 }
