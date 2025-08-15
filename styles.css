@@ -886,6 +886,19 @@ body {
     font-size: 2.6rem;
     top: 58%;
     transform: translate(-50%, -50%);
+    /* 为移动端logo文字添加粗体效果 */
+    font-family: 'Noto Sans SC', 'Source Han Sans SC', "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 0.5px currentColor;
+    text-shadow: 
+        0.5px 0 0 currentColor, 
+        -0.5px 0 0 currentColor, 
+        0 0.5px 0 currentColor, 
+        0 -0.5px 0 currentColor,
+        0.5px 0.5px 0 currentColor,
+        -0.5px -0.5px 0 currentColor,
+        0.5px -0.5px 0 currentColor,
+        -0.5px 0.5px 0 currentColor !important;
 }
 
 .green-line {
@@ -1493,5 +1506,4 @@ body {
     font-size: 0.66rem;
     
     line-height: 1.4;
-}
-}
+}}
