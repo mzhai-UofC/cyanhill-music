@@ -886,19 +886,11 @@ body {
     font-size: 2.6rem;
     top: 58%;
     transform: translate(-50%, -50%);
-    /* 为移动端logo文字添加粗体效果 */
+    /* 调整为更自然的粗体效果，接近微软雅黑bold */
     font-family: 'Noto Sans SC', 'Source Han Sans SC', "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important;
-    font-weight: 900 !important;
-    -webkit-text-stroke: 0.5px currentColor;
-    text-shadow: 
-        0.5px 0 0 currentColor, 
-        -0.5px 0 0 currentColor, 
-        0 0.5px 0 currentColor, 
-        0 -0.5px 0 currentColor,
-        0.5px 0.5px 0 currentColor,
-        -0.5px -0.5px 0 currentColor,
-        0.5px -0.5px 0 currentColor,
-        -0.5px 0.5px 0 currentColor !important;
+    font-weight: 700 !important; /* 从900改为700，更接近bold */
+    /* 移除过度的描边和阴影效果 */
+    text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
 }
 
 .green-line {
@@ -939,25 +931,15 @@ body {
 .mobile-vol-title {
     font-size: 1.4rem !important; 
     margin-bottom: 5.5vh;
-    /* 使用web字体确保移动端粗体效果 */
+    /* 使用更自然的粗体效果 */
     font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
-    font-weight: 900 !important; /* 使用最粗的权重 */
+    font-weight: 700 !important; /* 从900改为700 */
     flex-shrink: 0;
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased; 
     text-rendering: optimizeLegibility;
-    /* 为移动端添加更强的文字描边效果 */
-    -webkit-text-stroke: 0.5px currentColor;
-    text-shadow: 
-        0.5px 0 0 currentColor, 
-        -0.5px 0 0 currentColor, 
-        0 0.5px 0 currentColor, 
-        0 -0.5px 0 currentColor,
-        0.5px 0.5px 0 currentColor,
-        -0.5px -0.5px 0 currentColor,
-        0.5px -0.5px 0 currentColor,
-        -0.5px 0.5px 0 currentColor !important;
-    /* text-align: center; */
+    /* 使用更轻微的阴影效果 */
+    text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
 }
 
 
@@ -972,17 +954,8 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
-    font-weight: 900 !important;
-    -webkit-text-stroke: 0.5px currentColor;
-    text-shadow: 
-        0.5px 0 0 currentColor, 
-        -0.5px 0 0 currentColor, 
-        0 0.5px 0 currentColor, 
-        0 -0.5px 0 currentColor,
-        0.5px 0.5px 0 currentColor,
-        -0.5px -0.5px 0 currentColor,
-        0.5px -0.5px 0 currentColor,
-        -0.5px 0.5px 0 currentColor !important;
+    font-weight: 700 !important; /* 从900改为700 */
+    text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
 }
 
 /* 其他移动端样式保持不变 */
@@ -1041,17 +1014,8 @@ body {
     font-size: 1.4rem !important;
     text-align: left;
     font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
-    font-weight: 900 !important;
-    -webkit-text-stroke: 0.5px currentColor;
-    text-shadow: 
-        0.5px 0 0 currentColor, 
-        -0.5px 0 0 currentColor, 
-        0 0.5px 0 currentColor, 
-        0 -0.5px 0 currentColor,
-        0.5px 0.5px 0 currentColor,
-        -0.5px -0.5px 0 currentColor,
-        0.5px -0.5px 0 currentColor,
-        -0.5px 0.5px 0 currentColor !important;
+    font-weight: 700 !important; /* 从900改为700 */
+    text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
 }
 
 /* 显示角色信息 */
@@ -1375,16 +1339,11 @@ body {
 .mobile-vol-title {
     font-size: 0.9rem !important;
     font-family: 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
-    font-weight: 900 !important;
+    font-weight: 700 !important; /* 从900改为700 */
     color: #00b894;
     margin-bottom: 30px;
     text-align: left;
-    -webkit-text-stroke: 0.3px currentColor;
-    text-shadow: 
-        0.3px 0 0 currentColor, 
-        -0.3px 0 0 currentColor, 
-        0 0.3px 0 currentColor, 
-        0 -0.3px 0 currentColor !important;
+    text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
 }
 
 .mobile-album-info {
@@ -1506,4 +1465,5 @@ body {
     font-size: 0.66rem;
     
     line-height: 1.4;
-}}
+}
+}
