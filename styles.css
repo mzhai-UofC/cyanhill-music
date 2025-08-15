@@ -1016,7 +1016,7 @@ body {
 
 .profile-left-content .section-title {
     margin-bottom: 15px;
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important; /* 改为1.5rem */
     text-align: left;
     font-family: 'Inter', 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
     font-weight: 700 !important;
@@ -1289,7 +1289,7 @@ body {
 }
 
 .contact-info h3 {
-   font-size: 0.85rem;
+   font-size: 1rem;
     margin-bottom: 12px;
     text-align: left;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
@@ -1297,7 +1297,7 @@ body {
 }
 
 .contact-item {
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-bottom: 12px;
     text-align: left;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
@@ -1343,7 +1343,7 @@ body {
 }
 
 .mobile-vol-title {
-    font-size: 0.9rem !important;
+    font-size: 1.2rem !important; /* 从0.9rem改为1.2rem */
     font-family: 'Inter', 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
     font-weight: 700 !important;
     color: #00b894;
@@ -1375,12 +1375,13 @@ body {
 }
 
 .mobile-album-image {
-    width: 100%;
-    max-width: none;
+    width: 70%; /* 从70%进一步缩小到35% */
+
     height: auto;
     aspect-ratio: 1/1;
     object-fit: cover;
     display: block;
+    margin: 0 auto; /* 居中显示 */
 }
 
 /* 隐藏原有的china-edm-vol-content和album-section */
@@ -1475,4 +1476,497 @@ body {
     
     line-height: 1.4;
 }
+}
+/* iPad版本响应式设计 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 基础样式调整 */
+    .container {
+        max-width: calc(100vw - 16vw);
+        margin: 0 8vw;
+    }
+
+    /* 单独覆盖桌面版的section-title样式 */
+    .section-title {
+        font-size: 2rem !important; /* 改为1.5rem */
+        margin-bottom: 4vh;
+        font-family: 'Inter', 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.01em !important;
+        text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
+        text-align: left !important; /* 强制左对齐 */
+        min-width: auto;
+        flex-shrink: 1;
+        display: block !important; /* 确保不是flex布局 */
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+
+    /* Releases section */
+    .section-title.centered {
+        font-size: 1.2rem !important;
+        margin-bottom: 6vh;
+        gap: 50px;
+        text-align: center;
+        position: relative !important; /* 确保保留定位 */
+        display: flex !important; /* 确保保留flex布局 */
+        align-items: center !important; /* 确保垂直居中 */
+        justify-content: center !important; /* 确保水平居中 */
+    }
+
+    /* 确保iPad版本也有两边横线效果 */
+    .section-title.centered::before,
+    .section-title.centered::after {
+        content: '' !important;
+        flex: 1 !important;
+        height: 2px !important;
+        background-color: #00b894 !important;
+        max-width: 15vw !important; /* 调整iPad版本的横线长度 */
+    }
+
+    /* 修复专辑封面大小 - 进一步缩小 */
+    .mobile-album-image {
+        width: 70%; /* 从70%进一步缩小到35% */
+        max-width: 240px; 
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto; /* 居中显示 */
+    }
+
+    /* 调整专辑信息容器比例 */
+    .mobile-album-left {
+        width: 60%; /* 从50%增加到60% */
+        text-align: left;
+    }
+
+    .mobile-album-right {
+        width: 35%; /* 从45%减少到35% */
+    }
+
+    /* 移除所有右侧内容的额外padding */
+    .about-text,
+    .profile-right,
+    .china-edm-right,
+    .china-edm-vol-right,
+    .album-right,
+    .china-edm-live-right,
+    .contact-right {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* 统一内容布局 - 垂直布局且左对齐 */
+    .about-content,
+    .profile-content,
+    .china-edm-content,
+    .china-edm-vol-content,
+    .china-edm-live-content,
+    .album-section {
+        flex-direction: column;
+        gap: 30px;
+        text-align: left !important; /* 强制左对齐 */
+        align-items: flex-start !important; /* 确保子元素左对齐 */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 100vh;
+    }
+
+    .language-toggle {
+        top: 5vh;
+        right: 8vw;
+        font-size: 1.1rem;
+        font-weight: normal;
+    }
+
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        margin-top: 13.5vh;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .logo-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .logo-main-image {
+        width: 28vw;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .logo-text-overlay {
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #000000;
+        font-family: 'Inter', 'Noto Sans SC', 'Source Han Sans SC', Arial, sans-serif !important;
+        font-size: 4.2vw;
+        font-weight: 700 !important;
+        text-align: center;
+        letter-spacing: 0.02em !important;
+        line-height: 1.2;
+        z-index: 2;
+        pointer-events: none;
+        white-space: nowrap;
+        text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
+    }
+
+    .green-line {
+        width: 12vw;
+        height: 0.3vh;
+        background-color: #00b894;
+        margin-top: 9vh;
+        margin-bottom: 1.5vh;
+    }
+
+    .hero-subtitle-image {
+        width: 12vw;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .scroll-indicator {
+        position: relative;
+        font-size: 2rem;
+        color: transparent;
+        animation: bounce 2s infinite;
+        margin-top: 10.5vh;
+        display: inline-block;
+        left: -1vw;
+    }
+
+    .scroll-indicator::before {
+        content: "∨";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #c7c7c7;
+        -webkit-text-stroke: 2px #c7c7c7;
+    }
+
+    .scroll-indicator::after {
+        content: "∨";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #c7c7c7;
+    }
+
+    /* 所有section样式 */
+    .about-section,
+    .profile-section,
+    .releases-section,
+    .china-edm-section,
+    .china-edm-live-section {
+        padding: 10vh 0;
+        text-align: left;
+    }
+
+    /* 其他标题样式 */
+    .vol-title,
+    .mobile-vol-title {
+        font-size: 2rem !important; /* 改为1.5rem */
+        margin-bottom: 4vh;
+        font-family: 'Inter', 'Noto Sans SC', 'Source Han Sans SC', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.01em !important;
+        text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor !important;
+        text-align: left;
+        min-width: auto;
+        flex-shrink: 1;
+        color: #00b894;
+    }
+
+    /* 统一文字内容居左并移除右边空白 */
+    .about-text,
+    .profile-right,
+    .china-edm-right,
+    .china-edm-vol-right,
+    .china-edm-live-right {
+        width: 100%;
+        text-align: left;
+        max-width: 100% !important; /* 确保不超出容器宽度 */
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* 确保所有P段落占满可用宽度 */
+    .about-text p,
+    .profile-description p,
+    .profile-location,
+    .profile-details,
+    .china-edm-description p,
+    .vol-description p,
+    .live-description p,
+    .mobile-album-info p {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 3vh;
+        color: #585858;
+        text-align: left !important;
+        margin-left: 0;
+        padding-left: 0;
+        margin-right: 0 !important; /* 移除右边距 */
+        padding-right: 0 !important; /* 移除右边内边距 */
+        width: 100% !important; /* 确保占满可用宽度 */
+        box-sizing: border-box !important;
+    }
+
+    /* 特别处理段落容器 */
+    .vol-description,
+    .china-edm-description,
+    .live-description,
+    .profile-description {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Profile section */
+    .profile-left {
+        display: flex;
+        flex-direction: row;
+        gap: 4%;
+        align-items: flex-start;
+        min-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .profile-left-content {
+        width: 60%;
+        text-align: left;
+    }
+
+    .profile-left-content .section-title {
+        margin-bottom: 20px;
+        font-size: 2rem !important; /* 改为2rem */
+        text-align: left;
+    }
+
+    .profile-roles {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .profile-role {
+        font-size: 1rem;
+        color: #585858;
+        margin-bottom: 6px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .profile-left-content .profile-nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 0;
+    }
+
+    .profile-image-container {
+        width: 36%;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 100%;
+        border-radius: 12px;
+        margin: 0;
+    }
+
+    .profile-image-container .profile-nav {
+        display: none;
+    }
+
+    .nav-btn {
+        font-size: 1rem;
+        padding: 6px 0;
+        margin-left: 0;
+        margin-right: 5vw;
+    }
+
+    .profile-right .profile-info {
+        display: none;
+    }
+
+    .profile-right {
+        width: 100%;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    /* Releases section */
+    .section-title.centered {
+        font-size: 1.2rem !important; /* 从0.9rem改为1.2rem */
+        margin-bottom: 6vh;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .releases-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2vw 3vh;
+        margin-bottom: 3vh;
+        margin-left: -4vw;
+        margin-right: -4vw;
+    }
+
+    .release-image img {
+        height: 35vw;
+        width: 100%;
+    }
+
+    .play-button {
+        width: 38px;
+        height: 38px;
+        bottom: 2.5vh;
+        left: 8vw;
+    }
+
+    .release-info .artist,
+    .release_info .track {
+        font-size: 1rem; /* 从0.7rem改为1rem */
+        color: #585858;
+        text-align: center;
+    }
+
+    .more-button {
+        margin-top: 5vh;
+        margin-right: 4vh;
+    }
+
+    .more-link {
+        font-size: 1rem;
+    }
+
+    /* CHINA EDM section */
+    .china-edm-section {
+        padding-top: 18vh;
+    }
+
+    .mobile-album-container {
+        display: flex;
+        flex-direction: row;
+        gap: 5%;
+        margin-bottom: 6vh;
+        margin-right: -2vw;
+    }
+
+    .mobile-album-left {
+        width: 50%;
+        text-align: left;
+    }
+
+    .mobile-vol-title {
+        font-size: 1.2rem !important; /* 从0.9rem改为1.2rem */
+        margin-bottom: 25px;
+        text-align: left;
+    }
+
+    .mobile-album-info {
+        text-align: left;
+    }
+
+    .mobile-album-info p {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        text-align: left !important;
+    }
+
+    .mobile-album-right {
+        width: 45%;
+    }
+
+    .china-edm-vol-left {
+        display: none;
+    }
+
+    .album-section {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .album-left {
+        display: none;
+    }
+
+    .album-right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Track list */
+    .track-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+        gap: 10px;
+        position: relative;
+        padding-right: 60px;
+    }
+
+    .track-number,
+    .track-artist {
+        font-size: 1rem;
+        color: #585858;
+        text-align: left;
+    }
+
+    .play-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 38px;
+        height: 32px;
+    }
+
+    /* Contact section */
+    .contact-section {
+        margin-top: 15vh;
+        margin-bottom: 6vh;
+    }
+
+    .contact-info h3 {
+        font-size: 1rem;
+        margin-top: 4vh;
+        text-align: left;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    /* ICP Footer */
+    .icp-footer {
+        margin-top: 6vh;
+        margin-bottom: 3vh;
+    }
+
+    .icp-footer p {
+        font-size: 1rem;
+    }
 }
