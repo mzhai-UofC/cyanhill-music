@@ -972,7 +972,7 @@ body {
 .vol-description p,
 .live-description p {
      color: #383838;
-    font-size: 0.69rem;
+    font-size: 0.72rem;
     line-height: 1.8;
     margin-bottom: 2.3vh;
     text-align: justify;
@@ -1031,7 +1031,7 @@ body {
 }
 
 .profile-role {
-    font-size: 0.69rem;
+    font-size: 0.72rem;
     color: #383838;
     margin-bottom: 4px;
     text-align: left;
@@ -1081,7 +1081,7 @@ body {
 
 .nav-btn {
     margin-top: 0.3vh;;
-    font-size: 0.69rem;
+    font-size: 0.72rem;
     padding: 6px 12px;
     margin-right: 0;
     padding: 4px 0;
@@ -1096,7 +1096,7 @@ body {
     padding: 6px 12px;
     margin-right: 0;
     padding: 4px 0;
-    font-size: 0.69rem;
+    font-size: 0.72rem;
     border-bottom: 0.5px solid #00b894;
     margin-left: 0;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
@@ -1120,7 +1120,7 @@ body {
 }
 
 .profile-description p {
-    font-size: 0.69rem;
+    font-size: 0.72rem;
     line-height: 1.9;
     margin-bottom: 3.9vh;
     margin-right: 0;
@@ -1138,7 +1138,7 @@ body {
 }
 
 .profile-details {
-    font-size: 0.69rem;
+    font-size: 0.72rem;
     line-height: 1.9;
     margin-bottom: 0;
     margin-right: 0;
@@ -1358,7 +1358,7 @@ body {
 }
 
 .mobile-album-info p {
-    font-size: 0.69rem;
+    font-size: 0.72rem;
     color: #383838;
     margin-bottom: 8px;
     line-height: 1.4;
@@ -1427,7 +1427,7 @@ body {
     margin-bottom: 7vh;
 }
 .track-number, .track-artist {
-    font-size: 0.69rem;
+    font-size: 0.72rem;
 }
 .china-edm-live-section {
 
@@ -1448,16 +1448,18 @@ body {
 }
 
 .contact-info h3 {
-    font-size: 0.69rem;
+    font-size: 0.72rem;
    
     margin-top: 4vh;
     margin-bottom: 1vh;
     margin-left: 0;
+      color: #383838;
 }
 
 .contact-item {
   
-   font-size: 0.69rem;
+   font-size: 0.72rem;
+     color: #383838;
 }
 
 /* Mobile ICP Footer */
@@ -1469,7 +1471,8 @@ body {
 }
 
 .icp-footer p {
-    font-size: 0.66rem;
+    font-size: 0.75rem;
     
     line-height: 1.4;
+}
 }
