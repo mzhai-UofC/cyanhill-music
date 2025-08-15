@@ -77,7 +77,7 @@ body {
     color: #000000;
     font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     font-size: 3.5vw;
-    font-weight: bold;
+    font-weight: 900; /* 加粗 */
     text-align: center;
     letter-spacing: 0vw; 
     line-height: 1.2;
@@ -778,158 +778,20 @@ body {
     font-weight: 300;
 }
 
-
-
-@media (min-width: 1800px) and (max-width: 2399px) {
-    .container {
-        margin: 0 7.5vw; /* 使用相同的margin方式 */
-        max-width: none; /* 移除max-width限制 */
-    }
-    
-    body {
-        font-size: 0.95rem;
-    }
-    
-    .section-title {
-        font-size: 2.7rem; /* 从3rem增加到4.5rem */
-    }
-    
-    .releases-grid {
-        gap:  1% 8%;
-    }
-    
-    .release-image img {
-        height: 15vw;
-        max-height: 250px;
-    }
-    
-    .play-button {
-        width: 1.8vw;
-        height: 1.8vw;
-    
-        bottom: 1.5vw;
-        left: 1.3vw;
-    }
-    
-    .play-button::before {
-        width: 1.5vw;
-        height: 1.5vw;
-        max-width: 28px;
-        max-height: 28px;
-    }
-    
-    /* 删除headphone-icon响应式样式 */
-    
-    .hero-subtitle-image {
-        max-width: 15vw;
-    }
-    
+/* ICP Footer Styles */
+.icp-footer {
+    text-align: center;
+    margin-bottom: 4vh;
+    padding-top: 2vh;
+   
 }
 
-@media (min-width: 1400px) and (max-width: 1799px) {
-    .container {
-        margin: 0 8vw; /* 使用相同的margin方式 */
-        max-width: none; /* 移除max-width限制 */
-    }
-    
-    body {
-        font-size: 1.1rem;
-    }
-    
-    .section-title {
-        font-size: 2.7rem; /* 从2.5rem增加到3rem */
-    }
-    
-    .hero-subtitle-image {
-        max-width: 12vw;
-    }
-    
-
-}
-
-@media (max-width: 768px) {
-    .about-content,
-    .profile-content,
-    .china-edm-content,
-    .china-edm-vol-content,
-    .china-edm-live-content,
-    .contact-section,
-    .album-section {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .releases-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .play-button {
-        width: 38px;
-        height: 38px;
-        font-size: 1rem;
-        bottom: 2vh;
-        left: 2vw;
-    }
-    
-    .play-button::before {
-        width: 18px;
-        height: 18px;
-    }
-    
-    /* 删除headphone-icon响应式样式 */
-    
-    .profile-left,
-    .china-edm-left,
-    .china-edm-vol-left,
-    .china-edm-live-left,
-    .contact-left,
-    .album-left {
-        min-width: auto;
-    }
-    
-    .profile-image {
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .album-image {
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .brand-name {
-        font-size: 2rem;
-    }
-    
-    .logo-main-image {
-        max-width: 300px;
-    }
-    
-    .logo-text-overlay {
-        font-size: 3.5rem;
-        letter-spacing: 0.8px;
-    }
-    
-    .hero-subtitle-image {
-        max-width: 200px;
-    }
-    
-    .section-title {
-        font-size: 2rem; /* 从1.5rem增加到2rem */
-        min-width: auto;
-    }
-    
-    .track-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 20px;
-    }
-    
-    .track-number {
-        min-width: auto;
-    }
+.icp-footer p {
+    font-size: 0.8rem;
+    font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* 移动端响应式设计 */
@@ -1044,16 +906,25 @@ body {
 
 /* 统一标题样式 */
 .section-title,
-.vol-title {
-    font-size: 1.4rem; /* 移动端标题大小 */
+.vol-title,
+.mobile-vol-title {
+    font-size: 1.4rem !important; 
     margin-bottom: 5.5vh;
+    font-weight: bold !important; 
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important; 
+    flex-shrink: 0;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased; 
+    text-rendering: optimizeLegibility;
+    /* 使用更微妙的 text-shadow 效果 */
+    text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor !important;
     /* text-align: center; */
 }
 
 
 /* Releases section 特殊标题样式 */
 .section-title.centered {
-    font-size: 1rem;
+    font-size: 1rem !important;
     margin-bottom: 30px;
     text-align: center;
     gap: 30px;
@@ -1061,16 +932,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.section-title.centered::before,
-.section-title.centered::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background-color: #00b894;
-    max-width: none;
-    min-width: 80px;
+    font-weight: bold !important; 
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Arial, sans-serif !important;
+    text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor !important;
 }
 
 /* 其他移动端样式保持不变 */
@@ -1081,7 +945,7 @@ body {
 .china-edm-description p,
 .vol-description p,
 .live-description p {
-     color: #585858;
+     color: #383838;
     font-size: 0.69rem;
     line-height: 1.8;
     margin-bottom: 2.3vh;
@@ -1126,8 +990,11 @@ body {
 
 .profile-left-content .section-title {
     margin-bottom: 15px;
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
     text-align: left;
+    font-weight: bold !important; 
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    text-shadow: 0.2px 0 0 currentColor, -0.2px 0 0 currentColor !important;
 }
 
 /* 显示角色信息 */
@@ -1138,7 +1005,7 @@ body {
 
 .profile-role {
     font-size: 0.69rem;
-    color: #585858;
+    color: #383838;
     margin-bottom: 4px;
     text-align: left;
     line-height: 1.74;
@@ -1231,6 +1098,7 @@ body {
     margin-bottom: 3.9vh;
     margin-right: 0;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+     color: #383838;
     font-weight: 300;
 }
 /* 添加移动端字体大小覆盖 */
@@ -1291,6 +1159,7 @@ body {
 }
 
 .release-info .artist {
+    color: #383838;
     font-size: 0.55rem;
     line-height: 1.4;
     margin-bottom: 0.4vh;
@@ -1299,6 +1168,7 @@ body {
 }
 
 .release-info .track {
+    color: #383838;
     font-size: 0.55rem;
     line-height: 1.4;
     margin-top: 0;
@@ -1354,11 +1224,12 @@ body {
     font-weight: 500;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
+    color: #383838;
 }
 
 .track-artist {
     font-size: 0.8rem;
-    color: #585858;
+    color: #383838;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
 }
@@ -1445,11 +1316,13 @@ body {
 }
 
 .mobile-vol-title {
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
     color: #00b894;
     margin-bottom: 30px;
     text-align: left;
+    font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important;
+    text-shadow: 0.15px 0 0 currentColor, -0.15px 0 0 currentColor !important;
 }
 
 .mobile-album-info {
@@ -1458,7 +1331,7 @@ body {
 
 .mobile-album-info p {
     font-size: 0.69rem;
-    color: #585858;
+    color: #383838;
     margin-bottom: 8px;
     line-height: 1.4;
      font-family: "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
@@ -1559,5 +1432,17 @@ body {
    font-size: 0.69rem;
 }
 
+/* Mobile ICP Footer */
+.icp-footer {
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+   
+    text-align: center;
+}
 
+.icp-footer p {
+    font-size: 0.66rem;
+    
+    line-height: 1.4;
+}
 }
