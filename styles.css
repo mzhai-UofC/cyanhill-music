@@ -710,18 +710,13 @@ body {
 
 .play-btn::before {
     content: '';
-    width: 20px; /* 增加图标大小 */
-    height: 20px; /* 增加图标大小 */
+    width: 16px;
+    height: 16px;
     background-image: url('./images/icons8-play-50.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(94%) contrast(95%); /* 匹配 #585858 文字颜色 */
-}
-
-.play-btn:hover::before {
-    filter: brightness(0) saturate(100%) invert(35%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(89%) contrast(95%); /* hover时稍微深一点 */
 }
 
 /* Section 6: CHINA EDM LIVE Section */
