@@ -704,9 +704,8 @@ body {
 }
 
 /* Replace track list play button icons with image */
-.play-btn svg {
-    display: none; /* Hide the SVG icon */
-}
+/* .play-btn svg {
+    display: none; 
 
 .play-btn::before {
     content: '';
@@ -717,7 +716,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display: block;
-}
+} */
 
 /* Section 6: CHINA EDM LIVE Section */
 .china-edm-live-section {
@@ -1028,14 +1027,15 @@ body {
 .profile-roles {
     display: block;
     margin-bottom: 15px;
+    margin-right: 10vw;
 }
 
 .profile-role {
     font-size: 0.72rem;
     color: #383838;
-    margin-bottom: 4px;
+    margin-bottom: 18px;
     text-align: left;
-    line-height: 1.74;
+    line-height: 1.2;
 }
 
 /* 将nav按钮移到左侧下方 */
@@ -1968,5 +1968,10 @@ body {
 
     .icp-footer p {
         font-size: 1rem;
+    }
+}
+@media screen and (max-width: 390px) {
+    .mobile-vol-title {
+        font-size: 1.1rem !important;
     }
 }
